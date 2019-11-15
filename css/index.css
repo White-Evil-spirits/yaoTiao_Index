@@ -1,0 +1,383 @@
+.bigBanner {
+	width: 100%;
+	background: url(../images/index/bigbanner.png);
+	background-size: 100% 100%;
+	height: 10.8rem;
+	overflow: hidden;
+}
+
+.bannerText {
+	font-size: 0.482rem;
+	color: white;
+	margin-top: 2.38rem;
+	margin-left: 3.61rem;
+}
+
+.erweima {
+	width: 3.57rem;
+	margin-top: 0.4rem;
+	margin-left: 3.61rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.erweima>img {
+	width: 1.56rem;
+	height: 1.56rem;
+	display: block;
+}
+
+.bannerButton {
+	width: 3.57rem;
+	margin-top: 0.24rem;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 3.61rem;
+}
+
+.bannerButton>div {
+	width: 1.52rem;
+	height: 0.34rem;
+	background: linear-gradient(-90deg, rgba(226, 198, 161, 1), rgba(255, 237, 206, 1));
+	border-radius: 0.17rem;
+	color: #5E3B08;
+	font-size: 0.17rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 四个优势 */
+.content1 {
+	height: 10.8rem;
+	width: 100%;
+	background-color: white;
+}
+
+.fourText {
+	width: 10.66rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	background: url(../images/index/landrImg.png) no-repeat;
+	background-size: 100% auto;
+	background-position: 0 center;
+	font-size: 0.32rem;
+	font-family: SourceHanSansSC;
+	font-weight: 400;
+	color: rgba(102, 102, 102, 1);
+	text-align: center;
+}
+
+.fourContent {
+	width: 9.12rem;
+	height: 5.96rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+
+.fourDiv {
+	width: 49%;
+	height: 2.9rem;
+	background-color: #ececec;
+	border-radius: 0.17rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.fourDiv>img {
+	width: 1.11rem;
+	height: 1.1rem;
+}
+
+.fourDiv>span {
+	font-size: 0.42rem;
+	font-family: SourceHanSansSC;
+	font-weight: 400;
+	color: rgba(128, 34, 59, 1);
+	margin-top: 0.2rem;
+}
+
+.content2 {
+	width: 100%;
+	height: 10.2rem;
+	display: flex;
+}
+
+.content2-left {
+	width: 6.87rem;
+	height: 100%;
+	background-color: #decbaf;
+	text-align: center;
+}
+
+.content2-right {
+	height: 100%;
+	flex: 1;
+	background-image: url(../images/index/rightimg.png);
+	background-size: contain;
+}
+
+.content2-left-text {
+	margin: 2.3rem auto 2.55rem auto;
+}
+
+.content2-left-text>div:nth-child(1) {
+	width: 2.12rem;
+	border: 0.01rem solid #CF2730;
+	padding: 0.1rem 0.2rem 0.1rem 0.2rem;
+	margin: 0 auto;
+	font-size: 0.42rem;
+	font-family: SourceHanSansSC;
+	font-weight: 500;
+	color: rgba(207, 39, 48, 1);
+}
+
+.content2-left-text>div:nth-child(2) {
+	font-size: 0.4rem;
+	font-family: SourceHanSansSC;
+	font-weight: 500;
+	color: rgba(207, 39, 48, 1);
+	text-align: center;
+	margin-top: 0.79rem;
+}
+
+.content2-left-text>p {
+	font-size: 0.16rem;
+	font-family: SourceHanSansSC;
+	font-weight: 300;
+	color: rgba(207, 39, 48, 1);
+	margin-top: 0.15rem;
+}
+
+.content2-left-text-bottom {
+	font-size: 0.22rem !important;
+	font-family: SourceHanSansSC !important;
+	font-weight: 400 !important;
+	color: rgba(207, 39, 48, 1) !important;
+}
+
+.content3 {
+	height: 18.17rem;
+	width: 100%;
+}
+
+hr {
+	margin: 0 auto;
+	margin-top: 0.72rem;
+	width: 0.86rem;
+	height: 0.03rem;
+	color: #cf2730;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+
+.content3 {
+	padding-top: 2.26rem;
+	text-align: center;
+	font-size: 0.44rem;
+	font-family: SourceHanSansSC;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 1);
+}
+
+.content3-img {
+	height: 2.86rem;
+	width: 14.34rem;
+	margin: 0 auto;
+	margin-top: 1.11rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+
+.content3-img>img {
+	height: 1rem;
+	width: 13%;
+}
+
+.content3-title {
+	width: 15.76rem;
+	height: 1.24rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #e0e0e0;
+	margin-top: 1.78rem;
+	font-size: 0.44rem;
+	font-family: SourceHanSansSC;
+	font-weight: 400;
+	color: rgba(102, 102, 102, 1);
+}
+
+.lunbo {
+	height: 7.94rem;
+	width: 15.76rem;
+	margin: 0 auto;
+	margin-top: 0.42rem;
+	background-color: #DECBAF;
+}
+
+/* d */
+.buttomBar {
+	height: 8.87rem;
+	width: 100%;
+	border-top: 0.1rem solid #f4f4f4;
+	margin-top: 0.5rem;
+}
+
+.buttomBar1 {
+	width: 100%;
+	height: 4.5rem;
+	overflow: hidden;
+}
+
+.buttomBar1>div {
+	width: 14.96rem;
+	margin: 0 auto;
+	margin-top: 2.23rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.buttomBar1>div>a>div {
+	display: flex;
+	flex-direction: column;
+}
+
+.buttomBar1>div>a>div>img {
+	width: 0.8rem;
+	height: 0.8rem;
+}
+
+.buttomBar1>div>a>div>span {
+	font-size: 0.2rem;
+	font-family: Adobe Heiti Std;
+	font-weight: normal;
+	color: rgba(114, 114, 114, 1);
+	margin-top: 0.28rem;
+}
+
+.buttomBar2 {
+	width: 100%;
+	height: 2.67rem;
+	background-color: #e0e0e0;
+}
+
+
+.buttomBar2_content {
+	width: 16.04rem;
+	height: 2.37rem;
+	margin: 0 auto;
+	border-bottom: 1px #808080 dashed;
+	display: flex;
+	flex-direction: row;
+}
+
+.buttomBar2_content_left {
+	height: 2.37rem;
+	display: flex;
+}
+
+.shouye {
+	width: 1.32rem;
+}
+
+.shouye>a {
+	font-size: 0.21rem;
+	font-family: SourceHanSansSC;
+	font-weight: 400;
+	color: rgba(133, 133, 133, 1);
+}
+
+.page-link {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.1rem;
+}
+
+.page-link-phone {
+	width: 4.85rem;
+	font-size: 0.17rem;
+	font-family: SourceHanSansSC;
+	font-weight: 400;
+	color: rgba(133, 133, 133, 1);
+}
+
+.page-link-title {
+	width: 2.12rem;
+	height: 0.56rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.page-link a {
+	font-size: 0.21rem;
+	font-family: SourceHanSansSC;
+	font-weight: 400;
+	color: rgba(133, 133, 133, 1);
+}
+
+.page-ercode {
+	width: 3.18rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.ercode-yaotiao{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: rgba(133, 133, 133, 1);
+}
+
+.ercode-yaotiao span{
+	font-size: 0.1rem;
+}
+
+.ercode-yaotiao img {
+	width: 1.28rem;
+	height: 1.28rem;
+	margin: 0.1rem 0;
+	background-color: purple;
+}
+
+.buttomBar3 {
+	width: 100%;
+	height: 1.8rem;
+	background-color: #80223B;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size:0.17rem;
+	font-family:SourceHanSansSC;
+	font-weight:300;
+	color:rgba(255,255,255,1);
+}
+
+.buttomBar-friendship{
+	display: flex;
+	flex-direction: row;
+}
+
+.buttomBar-friendship span{
+	margin-left: 0.16rem;
+}
+
+
+/*  */

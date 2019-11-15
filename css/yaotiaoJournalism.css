@@ -1,0 +1,51 @@
+/* .content{
+	width: 100%;
+}
+
+.main{
+	margin: 0 auto;
+	width: 12rem;
+	height: 100%;
+	font-size:0.19rem;
+	font-family:SourceHanSansSC;
+	font-weight:400;
+	color:rgba(102,102,102,1);
+	padding-top: 0.55rem;
+	padding-bottom: 1.86rem;
+}
+ */
+.limt_content{
+	width: 12rem;
+	margin: 0 auto;
+	padding-top: 1.11rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.limt_annius{
+	display: flex;
+	justify-content: center;
+	margin-top: 0.2rem;
+}
+.anniu_border{
+	width: 0.34rem;
+	height: 0.34rem;
+	border: 0.01rem solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.anniu_borders_active{
+	background-color: #808080;
+}
+.limt_anniu_left{
+	
+}
+.limt_anniu{
+	margin-left: 0.04rem;
+}
+.limt_anniu_right{
+	margin-left: 0.04rem;
+}

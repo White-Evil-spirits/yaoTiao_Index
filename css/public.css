@@ -1,0 +1,318 @@
+
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	font-family:Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+	/* 禁止选中复制文本 */
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+}
+
+html,body{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+#app {
+	width: 100%;
+}
+
+/* 头部组件 ------------------------------------------------*/
+/* 组件样式 */
+.topBars{
+	width: 12rem;
+	margin: 0 auto;
+	margin-top: 0.45rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.leftImg{
+	height: 0.38rem;
+	width: 0.78rem;
+}
+
+.rightText{
+	width: 6.81rem;
+	color: white;
+	font-size: 0.18rem;
+	font-family:Noto Sans S Chinese;
+	font-weight:400;
+	color:rgba(255,255,255,1);
+	display: flex;
+	justify-content: space-between;
+}
+
+.rightText>a{
+	display: block;
+}
+/* ---------------------------------------------------------------- */
+
+
+/* 底部  组件样式*/
+/* d */
+.buttomBar {
+	height: 8.87rem;
+	width: 100%;
+	border-top: 0.1rem solid #f4f4f4;
+	margin-top: 0.5rem;
+}
+
+.buttomBar1 {
+	width: 100%;
+	height: 4.5rem;
+	overflow: hidden;
+}
+
+.buttomBar1>div {
+	width: 14.96rem;
+	margin: 0 auto;
+	margin-top: 2.23rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.buttomBar1>div>a>div {
+	display: flex;
+	flex-direction: column;
+}
+
+.buttomBar1>div>a>div>img {
+	width: 0.8rem;
+	height: 0.8rem;
+}
+
+.buttomBar1>div>a>div>span {
+	font-size: 0.2rem;
+	font-family: Adobe Heiti Std;
+	font-weight: normal;
+	color: rgba(114, 114, 114, 1);
+	margin-top: 0.28rem;
+}
+
+.buttomBar2 {
+	width: 100%;
+	height: 2.67rem;
+	background-color: #e0e0e0;
+}
+
+
+.buttomBar2_content {
+	width: 16.04rem;
+	height: 2.37rem;
+	margin: 0 auto;
+	border-bottom: 1px #808080 dashed;
+	display: flex;
+	flex-direction: row;
+}
+
+.buttomBar2_content_left {
+	height: 2.37rem;
+	display: flex;
+}
+
+.shouye {
+	width: 1.32rem;
+}
+
+.shouye>a {
+	font-size: 0.21rem;
+	font-family: SourceHanSansSC;
+	font-weight: 400;
+	color: rgba(133, 133, 133, 1);
+}
+
+.page-link {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.1rem;
+}
+
+.page-link-phone {
+	width: 4.85rem;
+	font-size: 0.17rem;
+	font-family: SourceHanSansSC;
+	font-weight: 400;
+	color: rgba(133, 133, 133, 1);
+}
+
+.page-link-title {
+	width: 2.12rem;
+	height: 0.56rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.page-link a {
+	font-size: 0.21rem;
+	font-family: SourceHanSansSC;
+	font-weight: 400;
+	color: rgba(133, 133, 133, 1);
+}
+
+.page-ercode {
+	width: 3.18rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.ercode-yaotiao{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: rgba(133, 133, 133, 1);
+}
+
+.ercode-yaotiao span{
+	font-size: 0.1rem;
+}
+
+.ercode-yaotiao img {
+	width: 1.28rem;
+	height: 1.28rem;
+	margin: 0.1rem 0;
+}
+
+.buttomBar3 {
+	width: 100%;
+	height: 1.8rem;
+	background-color: #80223B;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size:0.17rem;
+	font-family:SourceHanSansSC;
+	font-weight:300;
+	color:rgba(255,255,255,1);
+}
+
+.buttomBar-friendship{
+	display: flex;
+	flex-direction: row;
+}
+
+.buttomBar-friendship span{
+	margin-left: 0.16rem;
+}
+
+
+/*  */
+
+/* 除主页之外通用 banner 组件样式 */
+.banner1{
+	width: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+
+
+
+/* 所有页面的form  组件样式*/
+.content{
+	width: 100%;
+}
+
+.main{
+	margin: 0 auto;
+	width: 12rem;
+	height: 100%;
+	font-size:0.19rem;
+	font-family:SourceHanSansSC;
+	font-weight:400;
+	color:rgba(102,102,102,1);
+	padding-top: 0.55rem;
+	padding-bottom: 1rem;
+}
+.main_top{
+	width: 100%;
+	padding-top: 1.11rem;
+}
+.main_top>p:nth-child(1){
+	font-size:0.39rem;
+	font-family:SourceHanSansSC;
+	font-weight:400;
+	color:rgba(102,102,102,1);
+}
+.main_top>p:nth-child(2){
+	margin-top: 0.28rem;
+	font-size:0.28rem;
+	font-family:SourceHanSansSC;
+	font-weight:400;
+	color:rgba(102,102,102,1);
+}
+/* ------------------------------------------------ */
+/* 分页和轮播  组件样式*/
+.limt_contents{
+	width: 3.77rem;
+	height: 5.1rem;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+}
+.limt_contents>img{
+	width: 100%;
+	height: 3.39rem;
+}
+.limt_contents_buttom{
+	padding: 0.34rem 0.4rem 0.34rem 0.4rem;
+	height: 1.65rem;
+	background-color: #e0e0e0;
+	border-top: 0.04rem solid white;
+}
+.limt_contents_buttom>p{
+	font-size:0.13rem;
+	font-family:SourceHanSansSC;
+	font-weight:400;
+	color:rgba(102,102,102,1);
+	line-height:0.28rem;
+}
+
+/* 社会责任 & 公司简介 */
+.main_content{
+	width: 12rem;
+	margin:  0 auto;
+}
+
+.main_content>p{
+	font-size:0.19rem;
+	font-family:SourceHanSansSC;
+	font-weight:400;
+	color:rgba(102,102,102,1);
+	line-height:0.33rem;
+}
+.main_content>p:nth-child(1){
+	margin-top: 0.40rem;
+}
+.main_content>p:nth-child(2){
+	margin-top: 0.28rem;
+}
+
+.imge{
+	margin-top: 0.8rem;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 0.96rem;
+}
+
+.imge>img{
+	width: 3.69rem;
+	height: 2.39rem;
+}
