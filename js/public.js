@@ -161,11 +161,10 @@ Vue.component('bannerOne', {
 /* 分页组件 */
 Vue.component('limtUtil', {
 	props: {
-		utilContent:{
-			type:String,
-			default:'要挑欢迎您的加入！ 若您有意向，请按照指引完整填写 供应商基本信息并提交， 预计在7个工作日内给与回复。'
-		}
-		,
+		utilContent: {
+			type: String,
+			default: '要挑欢迎您的加入！ 若您有意向，请按照指引完整填写 供应商基本信息并提交， 预计在7个工作日内给与回复。'
+		},
 		imgSrc: {
 			type: String,
 			default: 'images/yaotiaoJournalism/55@2x.png'
@@ -184,6 +183,29 @@ Vue.component('limtUtil', {
 
 new Vue({
 	el: "#app",
-	data: {},
-	methods: {}
+	data: {
+		name: "",
+		phone: "",
+		remarks: ""
+	},
+	methods: {
+		/* 正则验证 */
+		setForms() {
+			let that = this;
+			var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
+			if (that.name == "" || that.name == null) {
+				alert("用户名不能为空")
+				return
+			}
+			if (that.phone == "" || that.phone == null) {
+				alert("手机号不能为空")
+				return
+			}
+			if (myreg.test(that.phone)) {
+				
+			} else {
+				alert("手机号格式错误")
+			}
+		}
+	}
 })
