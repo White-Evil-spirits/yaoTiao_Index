@@ -21,7 +21,7 @@ Vue.component('topBar', {
 		<a :style="{color:textColor+'!important'}" href="yaotiaoJournalism.html">新闻动态</a>
 		<a :style="{color:textColor+'!important'}" href="">会员权益</a>
 		<a :style="{color:textColor+'!important'}" href="">招商合作</a>
-		<a :style="{color:textColor+'!important'}" href="">联系我们</a>
+		<a :style="{color:textColor+'!important'}" href="linkWe.html">联系我们</a>
 		<a :style="{color:textColor+'!important'}" href="">下载app</a>
 		</div>
 		</div>`
@@ -181,31 +181,160 @@ Vue.component('limtUtil', {
 });
 
 
-new Vue({
-	el: "#app",
+/* 弹窗 */
+Vue.component('openWindow', {
+	props: {
+		utilContent: {
+			type: String,
+			default: '格式不正确或有未填项'
+		}
+	},
+	methods: {},
+	template: ` 
+	<div class="open" >
+		<div class="">
+			提示
+			<img src="images/xxs.png" @click="$emit('closetips')">
+		</div>
+		<div>
+			{{utilContent}}
+			<span class="open_span" @click="$emit('closetips')">
+				确定
+			</span>
+		</div>
+	</div>
+	`
+});
+
+var Mixins = {
+	// el: "#app",
 	data: {
 		name: "",
 		phone: "",
-		remarks: ""
+		remarks: "",
+		//隐藏弹窗
+		openwin: false,
+		requestBs: "",
+		isOut: 0,
+		utilcontent:'',
+		//电话正则
+		myreg:/^[1][3,4,5,7,8][0-9]{9}$/
+	},
+	created() {
+		this.isOuts()
 	},
 	methods: {
+		/* 测试 */
+		isOuts() {
+			//----------------------内网转外网
+			this.isOut = 0;
+			if (this.isOut == 0) {
+				this.requestBs = "http://192.168.6.231:8088"
+			}
+			if(this.isOut == 0){
+				this.requestBs
+			}
+		},
 		/* 正则验证 */
-		setForms() {
-			let that = this;
-			var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
-			if (that.name == "" || that.name == null) {
-				alert("用户名不能为空")
+		setForms(num) {
+			var self = this
+			// console.log(this.name, this.phone)
+			// var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
+			if (this.name == "") {
+				this.utilcontent = '姓名不能为空';
+				this.openwin = true
 				return
 			}
-			if (that.phone == "" || that.phone == null) {
-				alert("手机号不能为空")
+			if (this.phone == "") {
+				this.utilcontent = '电话不能为空';
+				this.openwin = true
 				return
 			}
-			if (myreg.test(that.phone)) {
-				
+
+			if (this.myreg.test(this.phone)) {
+
 			} else {
-				alert("手机号格式错误")
+				this.utilcontent = '手机号格式不正确';
+				this.openwin = true
+				return
 			}
+
+			// 192.168.6.231:8088
+			// console.log(this.requestBs + "-----------------------------");
+			var item = {
+				name: this.name,
+				phone: this.phone,
+				type: num,
+				remark: this.remarks
+			};
+			var item2 = JSON.stringify(item)
+			console.log(item2);
+			this.ajax({
+				type: 'post',
+				url: this.requestBs + '/appinlet/contactus/contactus',
+				data: {
+					data: item2
+				},
+				dataType: "json",
+				success: function(res) {
+					console.log(res);
+					if (res.status == 1) {
+						this.utilcontent = '提交成功';
+						self.openwin = true
+					}
+				}
+			})
+		},
+		//弹窗隐藏
+		noneOpen() {
+			this.openwin = false
+		},
+		ajax(options) {
+			options = options || {};
+			options.type = (options.type || "GET").toUpperCase();
+			options.dataType = options.dataType || "json";
+			var params = this.formatParams(options.data);
+			//创建xhr对象 - 非IE6
+			if (window.XMLHttpRequest) {
+				var xhr = new XMLHttpRequest();
+			} else { //IE6及其以下版本浏览器
+				var xhr = new ActiveXObject('Microsoft.XMLHTTP');
+			}
+			xhr.timeout = 3000;
+			xhr.ontimeout = function(event) {
+				alert('请求超时！');
+			}
+
+			//GET POST 两种请求方式
+			if (options.type == "GET") {
+				xhr.open("GET", options.url + "?" + params, true);
+				xhr.send(null);
+			} else if (options.type == "POST") {
+				xhr.open("POST", options.url, true);
+				//设置表单提交时的内容类型
+				xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				xhr.send(params);
+			}
+			//接收
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState == 4) {
+					var status = xhr.status;
+					if (status >= 200 && status < 300) {
+						options.success && options.success(JSON.parse(xhr.responseText));
+					} else {
+						options.fail && options.fail(status);
+					}
+				}
+			}
+		},
+		//格式化参数
+		formatParams(data) {
+			var arr = [];
+			for (var name in data) {
+				arr.push(encodeURIComponent(name) + "=" + encodeURIComponent(data[name]));
+			}
+			arr.push(("v=" + Math.random()).replace(".", ""));
+			return arr.join("&");
 		}
 	}
-})
+}

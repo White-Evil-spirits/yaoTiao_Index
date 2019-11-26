@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="要挑，要挑APP，要挑官网，要挑购物，要挑会员，要挑客服" />
+		<meta name="description" content="要挑以“生活，就是要，挑好的”为理念，秉承严谨的态度，严控各个生产环节，优选产品，为用户提供母婴玩具、家居日用、美妆个护、新鲜美食等品类精选商品。为用户提供富质感的产品和服务，优化线上购物体验，提升用户生活幸福感。" />
+		<meta name="renderer" content="webkit">
+		<title>供应商合作</title>
+		<link href="images/yaotiao.png" rel="SHORTCUT ICON" /> <!-- title图片 -->
+		<link rel="stylesheet" type="text/css" href="css/supplier.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+	</head>
+	<body>
+		
+		
+		
+		<div id="app">
+			<!--   -->
+			<open-window :util-content="utilcontent" v-show="openwin" @closetips="noneOpen"></open-window>				<!-- banner组件1 -->
+			<!-- banner组件1 -->
+			<div class="banner_vip">
+				
+			</div>
+			<div class="content">
+				<div style="background-color: #e0e0e0; padding-bottom: 0.72rem;">
+					<div class="main">
+						<a class="a_vip" href="index.html" >首页</a>><a class="a_vip" href="">供应商合作</a>
+						<div class="main_top">
+							<p>COOPERATION</p>
+							<p>供应商合作</p>
+						</div>
+					</div>
+					<div class="main_content">
+						<p>
+							要挑作为新型社交电商平台，拥有众多优质会员,在消费升级的背景下，要挑通过专业严苛品控、优质无忧的商家服务，<br> 致力于打造最受欢迎的会员制品牌优享平台， <br>为中国消费者甄选每一件全球优品，为品牌方带来更好的会员电商模式体验。 
+						</p>
+					</div>
+				</div>
+				<div class="supplier_title">
+					<div class="flex_content">
+						<div class="title_content">
+							<span>1/</span>
+							<span> 客户服务，释放商家人力<br>定期培训，专人答疑 </span>
+						</div>
+						<div class="title_content">
+							<span>2/</span>
+							<span> 定期组织商家培训，提升商家服务能力，<br> 匹配专属商管，解决商家日常疑问 </span>
+						</div>
+						<div class="title_content">
+							<span>3/</span>
+							<span> 新商家扶持计划,<br> 商品优先审核检测，新商家培训 <br>更多优质服务等待开启，敬请期待！ </span>
+						</div>
+						
+					</div>
+					
+				</div>
+				<form action="" method="post">
+					<div class="forms">
+						<ul>
+							<li>
+								商家信息
+							</li>
+							<li>
+								商家名称<span style="color: red;">*</span>
+								<input v-model="names" class="text_input" type="text" name="name" id="" value="" placeholder="请输入商家姓名" />
+							</li>
+							<li>
+								商家类型(单选）
+							</li>
+							<li style="justify-content: flex-start;">
+								<input v-model="danxuan"  @click="inputDis(2)"  class="cbox" type="radio" name="type" id="" value="1" />制造商
+							</li>
+							<li style="justify-content: flex-start;">
+								<input v-model="danxuan"  @click="inputDis(2)"  class="cbox" type="radio" name="type" id="" value="2" />品牌方
+							</li>
+							<li style="justify-content: flex-start;">
+								<input v-model="danxuan"  @click="inputDis(2)"  class="cbox" type="radio" name="type" id="" value="3" />总理商
+							</li>
+							<li style="justify-content: flex-start;">
+								<input v-model="danxuan"  @click="inputDis(2)"  class="cbox" type="radio" name="type" id="" value="4" />一级经销商
+							</li>
+							<li style="justify-content: flex-start;">
+								<input v-model="danxuan"  @click="inputDis(2)" class="cbox" type="radio" name="type" id="" value="5" />二级级经销商
+							</li>
+							<li style="justify-content: flex-start;">
+								<input v-model="danxuan"  @click="inputDis(1)" class="cbox" type="radio" name="type" id="" value="6" />其它
+							</li>
+							<li>
+								<input v-model="qitas" disabled="disabled" ref="nonetext" placeholder="其它..." class="text_input" style="width: 100%;height: 0.82rem;" type="text" name="6_content" id="" value="" />
+							</li>
+							<li>
+								联系人<span style="color: red;">*</span>
+								<input v-model="lianxiren" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的姓名" />
+							</li>
+							<li>
+								联系电话<span style="color: red;">*</span>
+								<input v-model="lianxidianhua" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的电话或座机" />
+							</li>
+							<li>
+								公司地址<span style="color: red;">*</span>
+								<input v-model="gongsiaddr" class="text_input" type="text" name="name" id="" value="" placeholder="请填写公司地址" />
+							</li>
+							<li>
+								供应品牌<span style="color: red;">*</span>
+								<input v-model="gongyingpinpai" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的品牌名称" />
+							</li>
+							<li>
+								产品类型<span style="color: red;">*</span>
+								<input v-model="chanpinleixing" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的产品类型" />
+							</li>
+							<li>
+								备注说明
+								<input v-model="beizhu" placeholder="备注..." class="text_input" style="height: 0.82rem;" type="text" name="6_content" id="" value="" />
+							</li>
+						</ul>
+					</div>
+					<div class="form_button" style="width: 12rem;margin: 0 auto;">
+						<input @click="setPhp()" type="button" name="" id="" value="提交" />
+						<input type="reset" name="" id="" value="重置" />
+					</div>
+				</form>
+			</div>
+			<buttom-bar></buttom-bar>
+		</div>
+		<script src="js/autorem.js" type="text/javascript"></script>
+		<script src="js/vue.js" type="text/javascript"></script>
+		<script src="js/public.js" type="text/javascript"></script>
+		<script src="js/supplier.js" type="text/javascript"></script>
+	</body>
+</html>

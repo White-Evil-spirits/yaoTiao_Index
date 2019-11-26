@@ -6,18 +6,21 @@
 		<meta name="keywords" content="要挑，要挑APP，要挑官网，要挑购物，要挑会员，要挑客服" />
 		<meta name="description" content="要挑以“生活，就是要，挑好的”为理念，秉承严谨的态度，严控各个生产环节，优选产品，为用户提供母婴玩具、家居日用、美妆个护、新鲜美食等品类精选商品。为用户提供富质感的产品和服务，优化线上购物体验，提升用户生活幸福感。" />
 		<meta name="renderer" content="webkit">
-		<title>新闻动态</title>
+		<title>代理商合作</title>
 		<link href="images/yaotiao.png" rel="SHORTCUT ICON" /> <!-- title图片 -->
 		<link rel="stylesheet" type="text/css" href="css/public.css" />
 	</head>
 	<body>
 		<div id="app">
+			<open-window v-show="openwin" @closetips="noneOpen"></open-window>
 			<!-- banner组件1 -->
-			<banner-one img-src="images/yaotiaoJournalism/bang@2x.png" banner-height="7.14"></banner-one>
+			<div class="banner_vip">
+				
+			</div>
 			<div class="content">
 				<div style="background-color: #e0e0e0; padding-bottom: 0.72rem;">
 					<div class="main">
-						<a class="a_vip" href="\" >首页</a>><a class="a_vip" href="\">代理商合作</a>
+						<a class="a_vip" href="index.html" >首页</a>><a class="a_vip" href="">代理商合作</a>
 						<div class="main_top">
 							<p>COOPERATION</p>
 							<p>代理商合作</p>
@@ -25,11 +28,10 @@
 					</div>
 					<div class="main_content">
 						<p>
-							要挑严格把控产品品质，为万千会员提供优质精选平价产品，为用户提供全流程无忧服务。 要挑以用户为中心，用户驱动为导向，注重产品品质和极致的用户体验，促使价格回归理性， 让消费者享受到物超所值的购物体验，为不断提升人们的生活幸福感而不懈努力。 
+							要挑严格把控产品品质，为万千会员提供优质精选平价产品，为用户提供全流程无忧服务。 <br>要挑以用户为中心，用户驱动为导向，注重产品品质和极致的用户体验，促使价格回归理性，<br> 让消费者享受到物超所值的购物体验，为不断提升人们的生活幸福感而不懈努力。 
 						</p>
 						<p>
-							要挑严格把控产品品质，为万千会员提供优质精选平价产品，为用户提供全流程无忧服务。 要挑以用户为中心，用户驱动为导向，注重产品品质和极致的用户体验，促使价格回归理性， 让消费者享受到物超所值的购物体验，为不断提升人们的生活幸福感而不懈努力。 					
-						</p>
+							要挑欢迎您的加入！<br> 若您有意向，请按照指引完整填写代理商基本信息并提交， <br>预计在7个工作日内给与回复 						</p>
 					</div>
 				</div>
 				<div class="form">
@@ -41,11 +43,14 @@
 								<div class="name">
 									姓名
 									<input v-model="name" type="text" name="name" id="" />
+									<span style="color:red; float: right;">*必填</span>
 									<img src="images/linkWe/soild.png" >
+									
 								</div>
 								<div class="name">
 									联系电话
 									<input v-model="phone" type="text" name="phone" id="" value="" />
+									<span style="color:red; float: right;">*必填</span>
 									<img src="images/linkWe/soild.png" >
 								</div>
 								<div class="name">
@@ -54,7 +59,7 @@
 									<img src="images/linkWe/soild.png" >
 								</div>
 								<div class="form_button">
-									<input type="button" name="" id="" value="提交" @click="setForms()"/>
+									<input type="button" name="" id="" value="提交" @click="setForms(2)"/>
 									<input type="reset" name="" id="" value="重置" />
 								</div>
 							</form>
@@ -70,5 +75,6 @@
 		<script src="js/autorem.js" type="text/javascript"></script>
 		<script src="js/vue.js" type="text/javascript"></script>
 		<script src="js/public.js" type="text/javascript"></script>
+		<script src="js/agent.js" type="text/javascript"></script>
 	</body>
 </html>

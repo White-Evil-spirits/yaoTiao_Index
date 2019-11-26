@@ -6,7 +6,7 @@
 		<meta name="keywords" content="要挑，要挑APP，要挑官网，要挑购物，要挑会员，要挑客服" />
 		<meta name="description" content="要挑以“生活，就是要，挑好的”为理念，秉承严谨的态度，严控各个生产环节，优选产品，为用户提供母婴玩具、家居日用、美妆个护、新鲜美食等品类精选商品。为用户提供富质感的产品和服务，优化线上购物体验，提升用户生活幸福感。" />
 		<meta name="renderer" content="webkit">
-		<title>首页</title>
+		<title>联系我们</title>
 		<link href="images/yaotiao.png" rel="SHORTCUT ICON" /> <!-- title图片 -->
 		<link rel="stylesheet" type="text/css" href="css/public.css" />
 		<!-- 引入css -->
@@ -20,35 +20,38 @@
 		
 		<!--  -->
 		<div id="app">
-				<!-- banner组件1 -->
+			<open-window ref="openwins" :util-content="utilcontent" v-show="openwin" @closetips="noneOpen"></open-window>				<!-- banner组件1 -->
 				<banner-one img-src="images/linkWe/banners.png" banner-height="7.14"></banner-one>
 				<div class="content">
 					<div class="main">
-						<a class="a_vip" href="" >首页</a>><a class="a_vip" href="">联系我们</a>
+						<a class="a_vip" href="index.html" >首页</a>><a class="a_vip" href="">联系我们</a>
 					</div>
 					<div class="form">
 						<p>联系我们</p>
 						<div class="form_content">
 							<div class="form_left">
 								<hr >
-								<form action="" method="post">
+								<form>
 									<div class="name">
 										姓名
-										<input type="text" name="name" id="" value="" />
+										<input v-model="name" type="text" name="" id="" />
+										<span style="color:red; float: right;">*</span>
 										<img src="images/linkWe/soild.png" >
+										
 									</div>
 									<div class="name">
 										联系电话
-										<input type="text" name="phone" id="" value="" />
+										<input v-model="phone" type="text" name="" id="" value="" />
+										<span style="color:red; float: right;">*</span>
 										<img src="images/linkWe/soild.png" >
 									</div>
 									<div class="name">
 										备注说明
-										<input type="text" name="remarks" id="" value="" />
+										<input v-model="remarks" type="text" name="" id="" value="" />
 										<img src="images/linkWe/soild.png" >
 									</div>
 									<div class="form_button">
-										<input type="submit" name="" id="" value="提交" />
+										<input type="button" name="" id="" value="提交" @click="setForms(2)"/>
 										<input type="reset" name="" id="" value="重置" />
 									</div>
 								</form>
