@@ -17,11 +17,12 @@
 		
 		<div id="app">
 			<!--   -->
-			<open-window :util-content="utilcontent" v-show="openwin" @closetips="noneOpen"></open-window>				<!-- banner组件1 -->
+			<open-window ref="openwins" :util-content="utilcontent" v-show="openwin" @closetips="noneOpen"></open-window>				<!-- banner组件1 -->
 			<!-- banner组件1 -->
-			<div class="banner_vip">
-				
-			</div>
+			<banner-one :bigback-colors="colors" big-img="images/topbar_left_h.png" text-color="#666666" img-src="images/agent/baner_vip.png" banner-height="7.14"
+			:about-yt="aboutYt" @on-links12="onLinksAbout" @out-links12="outLinksAbout"
+			:down-link="downLink"	@on-links22="onLinksHzuo" @out-links22="outLinksHzuo"
+			></banner-one>
 			<div class="content">
 				<div style="background-color: #e0e0e0; padding-bottom: 0.72rem;">
 					<div class="main">
@@ -91,27 +92,27 @@
 							</li>
 							<li>
 								联系人<span style="color: red;">*</span>
-								<input v-model="lianxiren" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的姓名" />
+								<input class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的姓名" />
 							</li>
 							<li>
 								联系电话<span style="color: red;">*</span>
-								<input v-model="lianxidianhua" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的电话或座机" />
+								<input class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的电话" />
 							</li>
 							<li>
 								公司地址<span style="color: red;">*</span>
-								<input v-model="gongsiaddr" class="text_input" type="text" name="name" id="" value="" placeholder="请填写公司地址" />
+								<input class="text_input" type="text" name="name" id="" value="" placeholder="请填写公司地址" />
 							</li>
 							<li>
 								供应品牌<span style="color: red;">*</span>
-								<input v-model="gongyingpinpai" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的品牌名称" />
+								<input class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的品牌名称" />
 							</li>
 							<li>
 								产品类型<span style="color: red;">*</span>
-								<input v-model="chanpinleixing" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的产品类型" />
+								<input class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的产品类型" />
 							</li>
 							<li>
 								备注说明
-								<input v-model="beizhu" placeholder="备注..." class="text_input" style="height: 0.82rem;" type="text" name="6_content" id="" value="" />
+								<input placeholder="备注..." class="text_input" style="height: 0.82rem;" type="text" name="6_content" id="" value="" />
 							</li>
 						</ul>
 					</div>

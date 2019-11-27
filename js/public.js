@@ -1,7 +1,7 @@
 /* toubu全局组件 */
 Vue.component('topBar', {
 	created() {
-		console.log(this.textColor);
+		console.log(this.bigbackColor);
 	},
 	props: {
 		textColor: {
@@ -11,20 +11,68 @@ Vue.component('topBar', {
 		bigImg: {
 			type: String,
 			default: 'images/topbar_left.png'
+		},
+		aboutYt: {
+			type: Boolean,
+			default: false
+		},
+		downLink: {
+			type: Boolean,
+			default: false
+		},
+		bigbackColor: {
+			type: String,
+			default: ''
 		}
 	},
-	template: `<div class="topBars">
-		<img :src="bigImg" class="leftImg" >
-		<div class="rightText">
-		<a :style="{color:textColor+'!important'}" href="index.html" style="margin-left: 0;">首页</a>
-		<a :style="{color:textColor+'!important'}" href="aboutYaotiao.html">关于要挑</a>
-		<a :style="{color:textColor+'!important'}" href="yaotiaoJournalism.html">新闻动态</a>
-		<a :style="{color:textColor+'!important'}" href="">会员权益</a>
-		<a :style="{color:textColor+'!important'}" href="">招商合作</a>
-		<a :style="{color:textColor+'!important'}" href="linkWe.html">联系我们</a>
-		<a :style="{color:textColor+'!important'}" href="">下载app</a>
+	methods:{
+		goindex(){
+			location.href = "index.html"
+		}
+	},
+	//
+	template: `
+	<div id="gundongtiaoColor" :style="{backgroundColor:bigbackColor}">
+		<div class="topBars">
+			<img :src="bigImg" class="leftImg" @click="goindex()">
+			<div class="rightText">
+				<div>
+					<a :style="{color:textColor+'!important'}" href="index.html" style="margin-left: 0;">首页</a>
+				</div>
+				<div @mouseenter="$emit('on-links1')" @mouseleave="$emit('out-links1')" >
+					<a :style="{color:textColor+'!important'}" href="aboutYaotiao.html">关于要挑</a>
+					<transition name="goon">
+						<span id="aDownLink" v-if="aboutYt">
+							<a href="companyProfile.html"><span>企业介绍</span></a>
+							<a href="social.html"><span>社会责任</span></a>
+						</span>
+					</transition>
+				</div>
+				<div>
+					<a :style="{color:textColor+'!important'}" href="yaotiaoJournalism.html">新闻动态</a>
+				</div>
+				<div>
+					<a :style="{color:textColor+'!important'}" href="Vip.html">会员权益</a>
+				</div>
+				<div @mouseenter="$emit('on-links2')" @mouseleave="$emit('out-links2')" >
+					<a :style="{color:textColor+'!important'}" href="agent.html" >招商合作</a>
+					<transition name="goon">
+						<span id="aDownLink" v-if="downLink">
+							<a href="agent.html"><span>代理商合作</span></a>
+							<a href="supplier.html"><span>供应商合作</span></a>
+						</span>
+					</transition>
+				</div>
+				<div>
+					<a :style="{color:textColor+'!important'}" href="linkWe.html">联系我们</a>
+				</div>
+				<div>
+					<a :style="{color:textColor+'!important'}" href="downApp.html">下载app</a>
+				</div>
+			</div>
 		</div>
-		</div>`
+		</div>
+	`
 })
 
 /* 底部 */
@@ -86,16 +134,16 @@ Vue.component('buttomBar', {
 					<div class="buttomBar2_content">
 						<div class="buttomBar2_content_left" style="flex-direction: row;">
 							<div class="shouye">
-								<a href="">首页</a>
+								<a href="index.html">首页</a>
 							</div>
 							<div class="page-link">
 								<div class="page-link-title">
-									<a href="">新闻动态</a>
-									<a href="">新闻动态</a>
+									<a href="yaotiaoJournalism.html">新闻动态</a>
+									<a href="linkWe.html">联系我们</a>
 								</div>
 								<div class="page-link-title">
-									<a href="">新闻动态</a>
-									<a href="">新闻动态</a>
+									<a href="agent.html">招商合作</a>
+									<a href="downApp.html">下载APP</a>
 								</div>
 							</div>
 						</div>
@@ -139,21 +187,57 @@ Vue.component('buttomBar', {
 })
 
 //banner1
-
 /* toubu全局组件 */
 Vue.component('bannerOne', {
+	created() {
+		console.log(this.bigbackColor);
+	},
 	props: {
 		imgSrc: {
 			type: String,
 			default: 'images/aboutYaotiao/banner.png'
 		},
+		bigImg: {
+			type: String,
+			default: 'images/topbar_left.png'
+		},
 		bannerHeight: {
 			type: String,
 			default: '8.2'
+		},
+		aboutYt: {
+			type: Boolean,
+			default: false
+		},
+		downLink: {
+			type: Boolean,
+			default: false
+		},
+		textColor: {
+			type: String,
+			default: 'white'
+		},
+		bigbackColors: {
+			type: String,
+			default: ''
 		}
 	},
+	methods: {
+
+	},
 	template: `<div class="banner1" :style="{backgroundImage: 'url('+ imgSrc +')',height:bannerHeight+'rem'}">
-				<top-bar></top-bar>
+				<top-bar 
+				:bigback-color="bigbackColors"
+				:big-img="bigImg"
+				:text-color="textColor"
+				:about-yt="aboutYt" 
+				@on-links1="$emit('on-links12')"
+				@out-links1="$emit('out-links12')"
+				:down-link="downLink"
+				@on-links2="$emit('on-links22')" 
+				@out-links2="$emit('out-links22')"
+				>
+				</top-bar>
 			</div>`
 });
 
@@ -171,7 +255,7 @@ Vue.component('limtUtil', {
 		}
 	},
 	template: ` <div class="limt_contents">
-					<img :src="imgSrc" >
+					<img :src="imgSrc">
 					<div class="limt_contents_buttom">
 						<p>
 							{{utilContent}}
@@ -216,12 +300,27 @@ var Mixins = {
 		openwin: false,
 		requestBs: "",
 		isOut: 0,
-		utilcontent:'',
+		utilcontent: '',
+		//下拉框
+		downLink: false,
+		aboutYt: false,
+		colors: "",
 		//电话正则
-		myreg:/^[1][3,4,5,7,8][0-9]{9}$/
+		myreg: /^[1][3,4,5,7,8][0-9]{9}$/
 	},
 	created() {
 		this.isOuts()
+	},
+	mounted() {
+		var that = this
+		window.onscroll = function() {
+			if (document.documentElement.scrollTop > 5) {
+				that.colors = '#a31f26'
+			}
+			if (document.documentElement.scrollTop <= 5) {
+				that.colors = ''
+			}
+		}
 	},
 	methods: {
 		/* 测试 */
@@ -231,8 +330,8 @@ var Mixins = {
 			if (this.isOut == 0) {
 				this.requestBs = "http://192.168.6.231:8088"
 			}
-			if(this.isOut == 0){
-				this.requestBs
+			if (this.isOut == 1) {
+				this.requestBs = "https://api.yaotiao.net"
 			}
 		},
 		/* 正则验证 */
@@ -289,6 +388,7 @@ var Mixins = {
 		noneOpen() {
 			this.openwin = false
 		},
+		//原生aj
 		ajax(options) {
 			options = options || {};
 			options.type = (options.type || "GET").toUpperCase();
@@ -335,6 +435,19 @@ var Mixins = {
 			}
 			arr.push(("v=" + Math.random()).replace(".", ""));
 			return arr.join("&");
+		},
+		//关于 -弹窗出现关闭
+		onLinksAbout() {
+			this.aboutYt = true
+		},
+		outLinksAbout() {
+			this.aboutYt = false
+		},
+		onLinksHzuo() {
+			this.downLink = true
+		},
+		outLinksHzuo() {
+			this.downLink = false
 		}
 	}
 }

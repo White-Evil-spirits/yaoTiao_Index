@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="要挑，要挑APP，要挑官网，要挑购物，要挑会员，要挑客服" />
+		<meta name="description" content="要挑以“生活，就是要，挑好的”为理念，秉承严谨的态度，严控各个生产环节，优选产品，为用户提供母婴玩具、家居日用、美妆个护、新鲜美食等品类精选商品。为用户提供富质感的产品和服务，优化线上购物体验，提升用户生活幸福感。" />
+		<meta name="renderer" content="webkit">
+		<title>下载App</title>
+		<link href="images/yaotiao.png" rel="SHORTCUT ICON" /> <!-- title图片 -->
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/downApp.css"/>
+	</head>
+	<body>
+		<div  id="app" style="overflow: hidden;">
+			<top-bar :bigback-color="colors" text-color="black" big-img="images/topbar_left_b.png" :about-yt="aboutYt" @on-links1="onLinksAbout" @out-links1="outLinksAbout"
+			:down-link="downLink"	@on-links2="onLinksHzuo" @out-links2="outLinksHzuo">
+			</top-bar>
+			<div class="content" style="margin-top: 2.38rem; overflow: hidden;">
+				<div class="main">
+					<a class="a_vip" href="index.html" >首页</a>><a class="a_vip" href="">联系我们</a>
+				</div>
+				<img class="downApp_img" src="images/downApp/downapp.png" >
+				<buttom-bar></buttom-bar>
+			</div>
+		</div>
+		<script src="js/autorem.js" type="text/javascript"></script>
+		<script src="js/vue.js" type="text/javascript"></script>
+		<script src="js/public.js" type="text/javascript"></script>
+		<script src="js/downApp.js" type="text/javascript"></script>
+	</body>
+</html>

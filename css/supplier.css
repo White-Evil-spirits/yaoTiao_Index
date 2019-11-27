@@ -16,7 +16,6 @@
 .title_content {
 	flex: 1;
 	display: flex;
-
 }
 
 .title_content>span:nth-child(1) {

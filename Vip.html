@@ -6,34 +6,54 @@
 		<meta name="keywords" content="要挑，要挑APP，要挑官网，要挑购物，要挑会员，要挑客服" />
 		<meta name="description" content="要挑以“生活，就是要，挑好的”为理念，秉承严谨的态度，严控各个生产环节，优选产品，为用户提供母婴玩具、家居日用、美妆个护、新鲜美食等品类精选商品。为用户提供富质感的产品和服务，优化线上购物体验，提升用户生活幸福感。" />
 		<meta name="renderer" content="webkit">
-		<title>新闻动态</title>
+		<title>会员权益</title>
 		<link href="images/yaotiao.png" rel="SHORTCUT ICON" /> <!-- title图片 -->
-		<link rel="stylesheet" type="text/css" href="css/companyProfile.css" />
+		<link rel="stylesheet" type="text/css" href="css/Vip.css" />
 		<link rel="stylesheet" type="text/css" href="css/public.css" />
 	</head>
 	<body>
 		<div id="app">
 			<!-- banner组件1 -->
-			<banner-one img-src="images/companyProfile/qiyejieshao.png" banner-height="7.14"></banner-one>
+			<banner-one :bigback-colors="colors" img-src="images/Vip/bang.png" banner-height="7.14"  img-src="images/agent/baner_vip.png" banner-height="7.14"
+			:about-yt="aboutYt" @on-links12="onLinksAbout" @out-links12="outLinksAbout"
+			:down-link="downLink"	@on-links22="onLinksHzuo" @out-links22="outLinksHzuo"></banner-one>
 			<div class="content">
 				<div class="main">
-					首页>关于要挑>企业简介
-					<div class="main_top">
-						<p>BRIEF INTRODUCTION</p>
-						<p>企业简介</p>
-					</div>
+					<a class="a_vip" href="index.html">首页</a>><a class="a_vip" href="#">会员权益</a>
 				</div>
-				<div class="main_content">
-					<p>
-						要挑，隶属山东啄木鸟信息技术有限公司，注册资金5000万，专注于电商平台化运营、系统软件技术研发、<br> 互联网整合营销、新零售品牌运营等。
-					</p>
-					<p>
-						公司一直秉持“以挑剔的态度，为中国消费者甄选每一件全球优品”为企业使命， <br>以责任、诚信、自律、价值、感恩、利他为企业价值观，打造极致的用户体验和购物体验， <br>为不断提升人们的生活幸福感而不懈努力。
-					</p>
-					<div class="imge">
-						<img src="images/companyProfile/108@2x.png">
-						<img src="images/companyProfile/108@2x.png">
-						<img src="images/companyProfile/108@2x.png">
+				<div class="vip_content">
+					<div class="content_top">
+						成为会员挑手<br>即刻尊享专属权益
+					</div>
+					<img class="img1" src="images/Vip/hello.png" >
+					<img class="img2" src="images/Vip/gril.png" >
+					<img class="img3" src="images/Vip/men.png" >
+					<img class="img4" src="images/Vip/what.png" >
+					<div class="content_text">
+						<div class="title_content" style="margin-top: 0;">
+							<span>1/</span>
+							<span> 会员礼包：<br>超出会员价值的礼包产品免费送 </span>
+						</div>
+						<div class="title_content" style="margin-top: 0;">
+							<span>2/</span>
+							<span>购物省钱：<br>享受VIP购物折扣，多买多省</span>
+						</div>
+						<div class="title_content">
+							<span>3/</span>
+							<span>分享赚钱：<br>海量好物，轻松带货</span>
+						</div>
+						<div class="title_content">
+							<span>4/</span>
+							<span>正品承诺：<br>精选产品，正品保障</span>
+						</div>
+						<div class="title_content">
+							<span>5/</span>
+							<span>专享优惠券：<br>每月不定期发放大额无门槛优惠券，物超所值</span>
+						</div>
+						<div class="title_content">
+							<span>6/</span>
+							<span>专享产品：<br>专属产品折扣尊享</span>
+						</div>
 					</div>
 				</div>
 				<buttom-bar></buttom-bar>
@@ -42,6 +62,6 @@
 		<script src="js/autorem.js" type="text/javascript"></script>
 		<script src="js/vue.js" type="text/javascript"></script>
 		<script src="js/public.js" type="text/javascript"></script>
-		<script src="js/companyProfile.js" type="text/javascript"></script>
+		<script src="js/Vip.js" type="text/javascript"></script>
 	</body>
 </html>

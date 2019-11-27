@@ -14,11 +14,14 @@
 	<body>
 		<div id="app">
 			<!-- banner组件1 -->
-			<banner-one></banner-one>
+			<banner-one :bigback-colors="colors"
+			:about-yt="aboutYt" @on-links12="onLinksAbout" @out-links12="outLinksAbout"
+			:down-link="downLink"	@on-links22="onLinksHzuo" @out-links22="outLinksHzuo"
+			></banner-one>
 			<!-- content -->
 			<div class="content">
 				<div class="main">
-					首页>关于要挑
+					<a href="index.html" class="a_vip">首页</a>><a class="a_vip" href="aboutYaotiao.html">关于要挑</a>
 					<div class="main_top">
 						<p>About Us</p>
 						<p>关于要挑</p>

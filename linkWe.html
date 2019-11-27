@@ -21,7 +21,10 @@
 		<!--  -->
 		<div id="app">
 			<open-window ref="openwins" :util-content="utilcontent" v-show="openwin" @closetips="noneOpen"></open-window>				<!-- banner组件1 -->
-				<banner-one img-src="images/linkWe/banners.png" banner-height="7.14"></banner-one>
+				
+				<banner-one :bigback-colors="colors" img-src="images/linkWe/banners.png" banner-height="7.14"  img-src="images/agent/baner_vip.png" banner-height="7.14"
+				:about-yt="aboutYt" @on-links12="onLinksAbout" @out-links12="outLinksAbout"
+				:down-link="downLink"	@on-links22="onLinksHzuo" @out-links22="outLinksHzuo"></banner-one>
 				<div class="content">
 					<div class="main">
 						<a class="a_vip" href="index.html" >首页</a>><a class="a_vip" href="">联系我们</a>
@@ -56,7 +59,7 @@
 									</div>
 								</form>
 							</div>
-							<div class="form_right">
+							<div class="form_right" id="baiMap">
 								
 							</div>
 						</div>
@@ -67,7 +70,8 @@
 		<script src="js/autorem.js" type="text/javascript"></script>
 		<script src="js/vue.js" type="text/javascript"></script>
 		<script src="js/public.js" type="text/javascript"></script>
-		<script src="js/swiper.min.js" type="text/javascript"></script>
 		<script src="js/linkWe.js" type="text/javascript"></script>
+		<script src="js/swiper.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=4TeYaI8SIzyY2nEHCyrFGmHflS2sAHLV"></script>
 	</body>
 </html>

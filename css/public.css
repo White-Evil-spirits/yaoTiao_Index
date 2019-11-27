@@ -28,6 +28,7 @@ a {
 	font-family: SourceHanSansSC;
 	font-weight: 400;
 	color: rgba(102, 102, 102, 1);
+	padding: 0 0.05rem 0 0.05rem;
 }
 
 #app {
@@ -37,9 +38,12 @@ a {
 /* 头部组件 ------------------------------------------------*/
 /* 组件样式 */
 .topBars {
+/* 	position: fixed;
+	left: calc(50% - 12rem / 2);
+	top: 0.45rem; */
 	width: 12rem;
 	margin: 0 auto;
-	margin-top: 0.45rem;
+	/* margin-top: 0.45rem; */
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
@@ -59,23 +63,62 @@ a {
 	color: rgba(255, 255, 255, 1);
 	display: flex;
 	justify-content: space-between;
-	position: relative;
+	align-content: center;
+	/* position: relative; */
 }
 
-.rightText>a {
+.rightText>div>a {
 	display: block;
+	line-height: 0.5rem;
 }
 
+.rightText>div{
+	position: relative;
+	height: 0.4rem;
+}
 /* 导航栏a标签下拉列表 */
 
 #aDownLink {
 	display: block;
-	width: 1rem;
-	height: 1rem;
+	width: 1.8rem;
+	/* background-color: rgba(255,255,255,0.6); */
 	background-color: white;
 	position: absolute;
-	right: 1.95rem;
-	top: 0.5rem;
+	/* right: 0.9rem; */
+	/* top: 0.4rem; */
+	box-shadow: 0rem 0.02rem 0.09rem #ffffff;
+	
+}
+
+#aDownLink>a>span{
+	display: block;
+	padding: 0.14rem 0.75rem 0.14rem 0.3rem;
+	font-size:0.14rem;
+	font-family:SourceHanSansSC;
+	font-weight:500;
+	color:rgba(68,68,68,1);
+	border-bottom: 0.01rem solid #e0e0e0;
+}
+#aDownLink>a:nth-last-child(1)>span{
+	border: none;
+}
+/* vue过渡动画 */
+.goon-enter-active,.goon-leave-active{
+	transition: all 0.5s ease;
+}
+.goon-enter,.goon-leave-to{
+	opacity: 0;
+	transform: translateY(40%);
+}
+
+#gundongtiaoColor{
+	width: 100%;
+	height: 1.5rem;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999999;
 }
 
 /* ---------------------------------------------------------------- */
@@ -87,7 +130,7 @@ a {
 	height: 8.87rem;
 	width: 100%;
 	border-top: 0.1rem solid #f4f4f4;
-	margin-top: 0.5rem;
+	margin-top: 0.3rem;
 }
 
 .buttomBar1 {
@@ -99,7 +142,7 @@ a {
 .buttomBar1>div {
 	width: 14.96rem;
 	margin: 0 auto;
-	margin-top: 2.23rem;
+	margin-top: 1.5rem;
 	display: flex;
 	justify-content: space-between;
 }
@@ -284,7 +327,7 @@ a {
 }
 
 /* ------------------------------------------------ */
-/* 分页和轮播  组件样式*/
+/* 分页  组件样式*/
 .limt_contents {
 	width: 3.77rem;
 	height: 5.1rem;
@@ -375,7 +418,6 @@ a {
 .form_right {
 	width: 3.37rem;
 	height: 2.4rem;
-	background-color: #007AFF;
 }
 
 .name {
@@ -483,4 +525,13 @@ a {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+}
+
+
+/* 百度地图 */
+#baiMap>img{
+	max-width: none;
+}
+#dituContent img{
+  max-width: none;
 }

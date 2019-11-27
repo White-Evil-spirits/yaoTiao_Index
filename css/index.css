@@ -89,6 +89,8 @@
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+	position: relative;
+	overflow: hidden;
 }
 
 .fourDiv>img {
@@ -206,7 +208,7 @@ hr {
 }
 
 .content3-title {
-	width: 15.76rem;
+	width: 15.5rem;
 	height: 1.24rem;
 	margin: 0 auto;
 	display: flex;
@@ -225,159 +227,134 @@ hr {
 	width: 15.76rem;
 	margin: 0 auto;
 	margin-top: 0.42rem;
-	background-color: #DECBAF;
+	position: relative;
 }
 
-/* d */
-.buttomBar {
-	height: 8.87rem;
+
+
+
+/* vue过渡动画 */
+/* vue过渡动画 */
+.postion {
+	position: absolute;
+	background-color: #ce272f;
 	width: 100%;
-	border-top: 0.1rem solid #f4f4f4;
-	margin-top: 0.5rem;
 }
 
-.buttomBar1 {
-	width: 100%;
-	height: 4.5rem;
-	overflow: hidden;
-}
-
-.buttomBar1>div {
-	width: 14.96rem;
+.users_onmos {
+	display: block;
 	margin: 0 auto;
-	margin-top: 2.23rem;
+	color: white;
+}
+
+.postion>hr {
+	width: 0.2rem;
+	color: white;
+	margin: 0.2rem 0 0.1rem 0;
+}
+
+.goon-enter-active,
+.goon-leave-active {
+	transition: all 0.5s ease;
+}
+
+.goon-enter,
+.goon-leave-to {
+	/* opacity: 0; */
+	transform: translateY(40%);
+}
+
+/* 轮播图布局 */
+.lunbo_content {
+	width: 100%;
+	height: 6.7rem;
+	margin-top: 0.4rem;
+	background-color: #007AFF;
+}
+
+.swiper-container {
+	height: 6.7rem !important;
 	display: flex;
 	justify-content: space-between;
 }
 
-.buttomBar1>div>a>div {
+.swiper-wrapper {
+	/* width: auto !important; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.swiper-slide {
+	/* margin: 0 !important; */
+	/* width: auto !important; */
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+.limt_contentss {
+	width: 4.96rem;
+	height: 6.7rem;
 	display: flex;
 	flex-direction: column;
+	align-content: space-between;
 }
 
-.buttomBar1>div>a>div>img {
-	width: 0.8rem;
-	height: 0.8rem;
-}
-
-.buttomBar1>div>a>div>span {
-	font-size: 0.2rem;
-	font-family: Adobe Heiti Std;
-	font-weight: normal;
-	color: rgba(114, 114, 114, 1);
-	margin-top: 0.28rem;
-}
-
-.buttomBar2 {
+.limt_contentss>img {
 	width: 100%;
-	height: 2.67rem;
+	height: 4.46rem;
+}
+
+.limt_contents_buttoms {
+	padding: 0.45rem 0.5rem 0.45rem 0.5rem;
+	height: 2.17rem;
 	background-color: #e0e0e0;
+	border-top: 0.04rem solid white;
 }
 
-
-.buttomBar2_content {
-	width: 16.04rem;
-	height: 2.37rem;
-	margin: 0 auto;
-	border-bottom: 1px #808080 dashed;
-	display: flex;
-	flex-direction: row;
-}
-
-.buttomBar2_content_left {
-	height: 2.37rem;
-	display: flex;
-}
-
-.shouye {
-	width: 1.32rem;
-}
-
-.shouye>a {
-	font-size: 0.21rem;
-	font-family: SourceHanSansSC;
-	font-weight: 400;
-	color: rgba(133, 133, 133, 1);
-}
-
-.page-link {
-	display: flex;
-	flex-direction: column;
-	margin-top: 1.1rem;
-}
-
-.page-link-phone {
-	width: 4.85rem;
+.limt_contents_buttoms>p {
 	font-size: 0.17rem;
 	font-family: SourceHanSansSC;
 	font-weight: 400;
-	color: rgba(133, 133, 133, 1);
+	color: rgba(102, 102, 102, 1);
+	line-height: 0.28rem;
 }
 
-.page-link-title {
-	width: 2.12rem;
-	height: 0.56rem;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
+#lunbo_dian {
+	position: absolute;
+	bottom: 0.21rem;
 }
 
-.page-link a {
-	font-size: 0.21rem;
-	font-family: SourceHanSansSC;
-	font-weight: 400;
-	color: rgba(133, 133, 133, 1);
+.swiper-pagination-bullet-active {
+	opacity: 1;
+	background: #666666;
 }
 
-.page-ercode {
-	width: 3.18rem;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+#swiper1 {
+	height: 100% !important;
 }
 
-.ercode-yaotiao{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	color: rgba(133, 133, 133, 1);
-}
-
-.ercode-yaotiao span{
-	font-size: 0.1rem;
-}
-
-.ercode-yaotiao img {
-	width: 1.28rem;
-	height: 1.28rem;
-	margin: 0.1rem 0;
-	background-color: purple;
-}
-
-.buttomBar3 {
-	width: 100%;
-	height: 1.8rem;
-	background-color: #80223B;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size:0.17rem;
+.lunbo_dian_span {
+	width: 0.8rem;
+	height: 0.25rem;
+	border-radius: 0.1rem;
+	background-color: #666666;
+	position: absolute;
+	bottom: 0.25rem;
+	left: 6.2rem;
+	color: white;
+	font-size:0.18rem;
 	font-family:SourceHanSansSC;
-	font-weight:300;
+	font-weight:400;
 	color:rgba(255,255,255,1);
+	z-index: 99;
+	cursor: pointer;
 }
-
-.buttomBar-friendship{
-	display: flex;
-	flex-direction: row;
-}
-
-.buttomBar-friendship span{
-	margin-left: 0.16rem;
-}
-
-
-/*  */
