@@ -25,8 +25,8 @@ Vue.component('topBar', {
 			default: ''
 		}
 	},
-	methods:{
-		goindex(){
+	methods: {
+		goindex() {
 			location.href = "index.html"
 		}
 	},
@@ -337,24 +337,24 @@ var Mixins = {
 		/* 正则验证 */
 		setForms(num) {
 			var self = this
-			// console.log(this.name, this.phone)
-			// var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
-			if (this.name == "") {
-				this.utilcontent = '姓名不能为空';
-				this.openwin = true
+			console.log(this.name, this.phone)
+			// var myreg = /^[1][3,4,5,7,8][0-9]{9}$/
+			if (self.name == "") {
+				self.utilcontent = '姓名不能为空';
+				self.openwin = true
 				return
 			}
-			if (this.phone == "") {
-				this.utilcontent = '电话不能为空';
-				this.openwin = true
+			if (self.phone == "") {
+				self.utilcontent = '电话不能为空';
+				self.openwin = true
 				return
 			}
 
-			if (this.myreg.test(this.phone)) {
+			if (self.myreg.test(self.phone)) {
 
 			} else {
-				this.utilcontent = '手机号格式不正确';
-				this.openwin = true
+				self.utilcontent = '手机号格式不正确';
+				self.openwin = true
 				return
 			}
 
@@ -378,8 +378,11 @@ var Mixins = {
 				success: function(res) {
 					console.log(res);
 					if (res.status == 1) {
-						this.utilcontent = '提交成功';
+						self.utilcontent = '提交成功';
 						self.openwin = true
+						self.name = ""
+						self.phone = ""
+						self.remarks = ""
 					}
 				}
 			})

@@ -473,6 +473,7 @@ a {
 	margin: 0 auto;
 	top: calc(50% - 2.78rem/2);
 	left: calc(50% - 5.4rem/2);
+	z-index: 999999999999999999;
 }
 
 .open>div:nth-child(1) {

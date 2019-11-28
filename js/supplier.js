@@ -29,8 +29,8 @@ new Vue({
 			}
 		},
 		setPhp() {
-			console.log(this.myreg)
-			console.log(this.lianxidianhua)
+
+			console.log(this.lianxiren + "-------")
 			var self = this
 			//验证用户
 			if (this.names == "") {
@@ -109,6 +109,15 @@ new Vue({
 					if (res.status == 1) {
 						self.utilcontent = '提交成功';
 						self.openwin = true
+						self.names = ""
+						self.lianxidianhua = ""
+						self.danxuan = ""
+						self.qitas = ""
+						self.lianxiren = ""
+						self.gongsiaddr = ""
+						self.gongyingpinpai = ""
+						self.chanpinleixing = ""
+						self.beizhu = ""
 					}
 				}
 			})
