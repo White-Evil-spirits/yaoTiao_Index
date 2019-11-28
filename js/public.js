@@ -1,7 +1,7 @@
 /* toubu全局组件 */
 Vue.component('topBar', {
 	created() {
-		console.log(this.bigbackColor);
+		
 	},
 	props: {
 		textColor: {
@@ -336,6 +336,7 @@ var Mixins = {
 		},
 		/* 正则验证 */
 		setForms(num) {
+			console.log(1111)
 			var self = this
 			console.log(this.name, this.phone)
 			// var myreg = /^[1][3,4,5,7,8][0-9]{9}$/

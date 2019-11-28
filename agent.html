@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<div id="app">
-			<open-window v-show="openwin" @closetips="noneOpen"></open-window>
+			<open-window ref="openwins" :util-content="utilcontent" v-show="openwin" @closetips="noneOpen"></open-window>
 			<!-- banner组件1 -->
 			<banner-one :bigback-colors="colors" big-img="images/topbar_left_h.png" text-color="#666666" img-src="images/agent/baner_vip.png" banner-height="7.14"
 			:about-yt="aboutYt" @on-links12="onLinksAbout" @out-links12="outLinksAbout"
@@ -43,20 +43,20 @@
 							<form action="" method="post">
 								<div class="name">
 									姓名
-									<input v-model="name" type="text" name="name" id="" />
-									<span style="color:red; float: right;">*必填</span>
+									<input v-model="name" type="text" name="name" id="" maxlength="10" />
+									<span style="color:red; float: right;">*</span>
 									<img src="images/linkWe/soild.png" >
 									
 								</div>
 								<div class="name">
 									联系电话
-									<input v-model="phone" type="text" name="phone" id="" value="" />
-									<span style="color:red; float: right;">*必填</span>
+									<input v-model="phone" type="text" name="phone" id="" value="" maxlength="11" />
+									<span style="color:red; float: right;">*</span>
 									<img src="images/linkWe/soild.png" >
 								</div>
 								<div class="name">
 									备注说明
-									<input v-model="remarks" type="text" name="remarks" id="" value="" />
+									<input v-model="remarks" type="text" name="remarks" id="" value="" maxlength="30" />
 									<img src="images/linkWe/soild.png" >
 								</div>
 								<div class="form_button">

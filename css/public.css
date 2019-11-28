@@ -18,6 +18,10 @@ body {
 	position: relative;
 }
 
+input {
+	outline: none;
+}
+
 a {
 	text-decoration: none;
 	color: white;
@@ -38,7 +42,7 @@ a {
 /* 头部组件 ------------------------------------------------*/
 /* 组件样式 */
 .topBars {
-/* 	position: fixed;
+	/* 	position: fixed;
 	left: calc(50% - 12rem / 2);
 	top: 0.45rem; */
 	width: 12rem;
@@ -72,10 +76,11 @@ a {
 	line-height: 0.5rem;
 }
 
-.rightText>div{
+.rightText>div {
 	position: relative;
 	height: 0.4rem;
 }
+
 /* 导航栏a标签下拉列表 */
 
 #aDownLink {
@@ -87,31 +92,36 @@ a {
 	/* right: 0.9rem; */
 	/* top: 0.4rem; */
 	box-shadow: 0rem 0.02rem 0.09rem #ffffff;
-	
+
 }
 
-#aDownLink>a>span{
+#aDownLink>a>span {
 	display: block;
 	padding: 0.14rem 0.75rem 0.14rem 0.3rem;
-	font-size:0.14rem;
-	font-family:SourceHanSansSC;
-	font-weight:500;
-	color:rgba(68,68,68,1);
+	font-size: 0.14rem;
+	font-family: SourceHanSansSC;
+	font-weight: 500;
+	color: rgba(68, 68, 68, 1);
 	border-bottom: 0.01rem solid #e0e0e0;
 }
-#aDownLink>a:nth-last-child(1)>span{
+
+#aDownLink>a:nth-last-child(1)>span {
 	border: none;
 }
+
 /* vue过渡动画 */
-.goon-enter-active,.goon-leave-active{
+.goon-enter-active,
+.goon-leave-active {
 	transition: all 0.5s ease;
 }
-.goon-enter,.goon-leave-to{
+
+.goon-enter,
+.goon-leave-to {
 	opacity: 0;
 	transform: translateY(40%);
 }
 
-#gundongtiaoColor{
+#gundongtiaoColor {
 	width: 100%;
 	height: 1.5rem;
 	position: fixed;
@@ -530,9 +540,10 @@ a {
 
 
 /* 百度地图 */
-#baiMap>img{
+#baiMap>img {
 	max-width: none;
 }
-#dituContent img{
-  max-width: none;
+
+#dituContent img {
+	max-width: none;
 }
