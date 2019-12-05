@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="要挑，要挑APP，要挑官网，要挑购物，要挑会员，要挑客服" />
+		<meta name="description" content="要挑以“生活，就是要，挑好的”为理念，秉承严谨的态度，严控各个生产环节，优选产品，为用户提供母婴玩具、家居日用、美妆个护、新鲜美食等品类精选商品。为用户提供富质感的产品和服务，优化线上购物体验，提升用户生活幸福感。" />
+		<meta name="renderer" content="webkit">
+		<title>联系方式</title>
+		<link href="images/yaotiao.png" rel="SHORTCUT ICON" /> <!-- title图片 -->
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/personinfo.css" />
+	</head>
+	<body style="background-color: #f2f2f2;">
+		<div id="app" style="overflow: hidden;">
+			<open-window ref="openwins" :util-content="utilcontent" v-show="openwin" @closetips="noneOpen"></open-window>
+			<top-bar :bigback-color="colors" text-color="black" big-img="images/topbar_left_b.png" :about-yt="aboutYt"
+			 @on-links1="onLinksAbout" @out-links1="outLinksAbout" :down-link="downLink" @on-links2="onLinksHzuo" @out-links2="outLinksHzuo">
+			</top-bar>
+			<div class="banners_vip" style="margin-top: 0.92rem;">
+				<img src="images/person/hhhh.png">
+			</div>
+
+			<div class="content">
+				<div class="main">
+					<a class="a_vip" href="index.html">首页</a>><a class="a_vip" href="person.html">人才招聘</a>><a class="a_vip" href="">简历投递</a>
+				</div>
+				<div class="jianli_top">
+					<img src="images/person/yt.png">
+				</div>
+				<div class="main_info">
+					<ul>
+						<li>
+							<input v-model="yinpinzhiwei" type="text" name="zhiwei" id="" value="" placeholder="应聘职位" /><span class="span_color">&nbsp;*</span>
+						</li>
+						<li>
+							<input v-model="mingzi" type="text" name="xingming" id="" value="" placeholder="姓名" /><span class="span_color">&nbsp;*</span>
+						</li>
+						<li>
+							性别
+						</li>
+						<li>
+							<input v-model="sex" style="width: auto; height: auto;" type="radio" name="sex" id="" value="0" />&nbsp;&nbsp;男
+						</li>
+						<li>
+							<input v-model="sex" style="width: auto; height: auto;" type="radio" name="sex" id="" value="1" />&nbsp;&nbsp;女
+						</li>
+						<li>
+							<input v-model="chusheng" type="text" name="chusheng" id="" value="" placeholder="出生年月" /><span class="span_color">&nbsp;*</span>
+						</li>
+						<li>
+							<input v-model="jiguan" type="text" name="jiguan" id="" value="" placeholder="籍贯" /><span class="span_color">&nbsp;*</span>
+						</li>
+						<li>
+							<input v-model="dianhua" type="text" name="dianhua" id="" value="" placeholder="联系电话" /><span class="span_color">&nbsp;*</span>
+						</li>
+						<li>
+							<input v-model="youxiang" type="text" name="youbian" id="" value="" placeholder="E-mail" /><span class="span_color">&nbsp;*</span>
+						</li>
+						<li>
+							<input v-model="xuexiao" type="text" name="xingming" id="" value="" placeholder="学校" /><span class="span_color">&nbsp;*</span>
+						</li>
+						<li>
+							<input v-model="zhuanye" type="text" name="xingming" id="" value="" placeholder="专业" /><span class="span_color">&nbsp;*</span>
+						</li>
+						<li>
+							<input v-model="tongxundizhi" type="text" name="xingming" id="" value="" placeholder="通讯地址" /><span class="span_color">&nbsp;&nbsp;&nbsp;</span>
+						</li>
+						<li>
+							<textarea v-model="jiangxiang" maxlength="300" cols="2" rows="6" placeholder="所获奖项"></textarea><span class="span_color">&nbsp;&nbsp;&nbsp;</span>
+						</li>
+						<li>
+							<textarea v-model="jingli" cols="2" rows="6" placeholder="工作经历"></textarea><span class="span_color">&nbsp;*</span>
+						</li>
+						<li>
+							<span class="">我的简历</span>
+						</li>
+						<li>
+							<input style="width: auto; height: auto;" type="file" name="upfile" id="" value="" />
+						</li>
+					</ul>
+				</div>
+				<div class="main_info_button" @click="setPersonInfo()">
+					<div class="person_go_content_buttom">
+						<div>
+							<span>
+								SUBMIT
+							</span>
+							<span>
+								提交
+							</span>
+							<img src="images/person/w.png">
+						</div>
+					</div>
+				</div>
+				<buttom-bar></buttom-bar>
+			</div>
+		</div>
+		<script src="js/autorem.js" type="text/javascript"></script>
+		<script src="js/vue.js" type="text/javascript"></script>
+		<script src="js/public.js" type="text/javascript"></script>
+		<script src="js/personinfo.js" type="text/javascript"></script>
+	</body>
+</html>

@@ -1,7 +1,16 @@
 /* toubu全局组件 */
 Vue.component('topBar', {
 	created() {
-		
+		/* 
+		 
+		 
+		 
+		我自己的看着都迷糊 -------------------------------------
+		 
+		 
+		 
+		 
+		 */
 	},
 	props: {
 		textColor: {
@@ -67,62 +76,102 @@ Vue.component('topBar', {
 					<a :style="{color:textColor+'!important'}" href="linkWe.html">联系我们</a>
 				</div>
 				<div>
-					<a :style="{color:textColor+'!important'}" href="downApp.html">下载app</a>
+					<a :style="{color:textColor+'!important'}" href="downApp.html">下载APP</a>
+				</div>
+				<div>
+					<a :style="{color:textColor+'!important'}" href="person.html">人才招聘</a>
 				</div>
 			</div>
 		</div>
 		</div>
 	`
 })
-
+/* --------------------------------------------- */
+Vue.component('xuJiangnan', {
+	props: {
+		dateSs: {
+			type: String,
+			default: "29"
+		},
+		edateSs: {
+			type: String,
+			default: "月份"
+		},
+		imgSrc: {
+			type: String,
+			default: "images/person/xxx.png"
+		},
+		mainContent: {
+			type: String,
+			default: "团队活动的内容文字团队,活动的内容文字"
+		}
+	},
+	template: `
+		<div class="img_team_contents">
+			<div class="img_team_content">
+				<img :src="imgSrc" >
+			</div>
+			<div class="img_team_text">
+				<div class="riqi">
+					<span>{{dateSs}}</span>
+					<span>{{edateSs}}</span>
+				</div>
+				<div class="riqi_main">
+					<span>2019-10</span>
+					<span>{{mainContent}}</span>
+				</div>
+			</div>
+		</div>
+	`
+})
 /* 底部 */
 Vue.component('buttomBar', {
 	template: `<div class="buttomBar">
 				<div class="buttomBar1">
 					<div>
-						<a href="">
+						<a href="javascript:void(0);">
 							<div>
 								<img src="images/you.png">
 								<span>甄选优品</span>
 							</div>
 						</a>
-						<a href="">
+						<a href="javascript:void(0);">
 							<div>
 								<img src="images/gou.png">
 								<span>产品为王</span>
 							</div>
 						</a>
-						<a href="">
+						<a href="javascript:void(0);">
 							<div>
 								<img src="images/jiang.png">
 								<span>严格筛选</span>
 							</div>
 						</a>
-						<a href="">
+						<a href="javascript:void(0);">
 							<div>
 								<img src="images/shang.png">
 								<span>流量无上限</span>
 							</div>
 						</a>
-						<a href="">
+						<a href="javascript:void(0);">
 							<div>
 								<img src="images/dui.png">
 								<span>无忧服务</span>
 							</div>
 						</a>
-						<a href="">
+						<a href="javascript:void(0);">
 							<div>
 								<img src="images/che.png">
 								<span>全国配送</span>
 							</div>
 						</a>
-						<a href="">
+						<a href="javascript:void(0);">
 							<div>
 								<img src="images/dun.png">
 								<span>质量保证</span>
 							</div>
 						</a>
-						<a href="">
+						<a href="javascript:void(0);">
 							<div>
 								<img src="images/vip.png">
 								<span>会员专属</span>
@@ -149,7 +198,7 @@ Vue.component('buttomBar', {
 						</div>
 						<div class="buttomBar2_content_left" style="margin-left: 3rem;flex-direction: column;">
 							<div class="shouye">
-								<a href="">联系方式</a>
+								<a href="javascript:void(0);">联系方式</a>
 							</div>
 							<div class="page-link-phone">
 								<p style="margin-top: 0.12rem;">电话:400-626-0009</p>
@@ -290,6 +339,9 @@ Vue.component('openWindow', {
 	`
 });
 
+
+
+
 var Mixins = {
 	// el: "#app",
 	data: {
@@ -306,7 +358,9 @@ var Mixins = {
 		aboutYt: false,
 		colors: "",
 		//电话正则
-		myreg: /^[1][3,4,5,7,8][0-9]{9}$/
+		myreg: /^[1][3,4,5,7,8][0-9]{9}$/,
+		//邮箱正则
+		isyouxiang: /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
 	},
 	created() {
 		this.isOuts()
@@ -336,7 +390,7 @@ var Mixins = {
 		},
 		/* 正则验证 */
 		setForms(num) {
-			console.log(1111)
+			// console.log(1111)
 			var self = this
 			console.log(this.name, this.phone)
 			// var myreg = /^[1][3,4,5,7,8][0-9]{9}$/
@@ -384,6 +438,9 @@ var Mixins = {
 						self.name = ""
 						self.phone = ""
 						self.remarks = ""
+					} else {
+						self.utilcontent = '提交失败';
+						self.openwin = true
 					}
 				}
 			})

@@ -100,7 +100,7 @@ hr{
 	width:0.37rem;
 	height:0.02rem;
 	color:rgba(102,102,102,1);
-	border: none;
+	/* border: none; */
 	margin-top: 0.27rem;
 }
 

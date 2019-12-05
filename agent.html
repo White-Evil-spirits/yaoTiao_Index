@@ -11,7 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="css/public.css" />
 	</head>
 	<body>
-		<div id="app">
+		<div id="app" v-cloak>
 			<open-window ref="openwins" :util-content="utilcontent" v-show="openwin" @closetips="noneOpen"></open-window>
 			<!-- banner组件1 -->
 			<banner-one :bigback-colors="colors" big-img="images/topbar_left_h.png" text-color="#666666" img-src="images/agent/baner_vip.png" banner-height="7.14"

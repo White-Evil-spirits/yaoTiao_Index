@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="要挑，要挑APP，要挑官网，要挑购物，要挑会员，要挑客服" />
+		<meta name="description" content="要挑以“生活，就是要，挑好的”为理念，秉承严谨的态度，严控各个生产环节，优选产品，为用户提供母婴玩具、家居日用、美妆个护、新鲜美食等品类精选商品。为用户提供富质感的产品和服务，优化线上购物体验，提升用户生活幸福感。" />
+		<meta name="renderer" content="webkit">
+		<title>团队风采</title>
+		<link href="images/yaotiao.png" rel="SHORTCUT ICON" /> <!-- title图片 -->
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/linkfunction.css"/>
+	</head>
+	<body>
+		<div  id="app" style="overflow: hidden;">
+			<top-bar :bigback-color="colors" text-color="black" big-img="images/topbar_left_b.png" :about-yt="aboutYt" @on-links1="onLinksAbout" @out-links1="outLinksAbout"
+			:down-link="downLink" @on-links2="onLinksHzuo" @out-links2="outLinksHzuo">
+			</top-bar>
+			<div class="banners_vip" style="margin-top: 0.92rem;">
+				<img src="images/person/banners.png" >
+			</div>
+			
+			<div class="content" >
+				<div class="main">
+					<a class="a_vip" href="index.html" >首页</a>><a class="a_vip" href="person.html">人才招聘</a>><a class="a_vip" href="">联系方式</a>
+				</div>
+				<div class="link_content">
+					<div class="link_content_left">
+						<p class="person_e">ON MY OWN</p>
+						<p class="person_texts">挑遍全球优品 用心创造生活</p>
+					</div>
+					<div class="link_content_right">
+						<p class="person_e">CONTACT WAY</p>
+						<p class="person_texts">联系方式</p>
+						<ul>
+							<li>联系人：王女士</li>
+							<li>招聘电话：18953355981</li>
+							<li>投递邮箱：563419409@qq.com</li>
+							<li>面试地点：山东省淄博市经济开发区张江淄博科技产业园2号楼801室</li>
+						</ul>
+					</div>
+				</div>
+				<buttom-bar></buttom-bar>
+			</div>
+		</div>
+		<script src="js/autorem.js" type="text/javascript"></script>
+		<script src="js/vue.js" type="text/javascript"></script>
+		<script src="js/public.js" type="text/javascript"></script>
+		<script src="js/linkfunction.js" type="text/javascript">
+			
+		</script>
+	</body>
+</html>

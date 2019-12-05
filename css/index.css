@@ -179,6 +179,7 @@ hr {
 	border-top: none;
 	border-left: none;
 	border-right: none;
+	background-color: #cf2730;
 }
 
 
@@ -292,13 +293,7 @@ hr {
 	justify-content: center;
 }
 
-
-
-
-
-
-
-
+/*  */
 
 .limt_contentss {
 	width: 4.96rem;

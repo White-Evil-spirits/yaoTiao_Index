@@ -1,0 +1,79 @@
+.main_info {
+	width: 12rem;
+	margin: 0 auto;
+	margin-top: 0.22rem;
+	padding: 0.3rem 0.28rem 0.3rem 0.28rem;
+	background-color: white;
+	font-size: 0.35rem;
+}
+
+.info_top {
+	padding: 0.42rem 0.66rem 0.12rem 0.39rem;
+	display: flex;
+	border-bottom: 0.01rem solid #f0f0f0;
+}
+
+.texts {
+	width: 43%;
+	font-size: 0.15rem;
+	font-family: SourceHanSansSC;
+	font-weight: 300;
+	color: rgba(121, 121, 121, 1);
+}
+
+.info_top>span {
+	flex: 1;
+	font-size: 0.17rem;
+	font-family: SourceHanSansSC;
+	font-weight: 500;
+	color: rgba(50, 50, 49, 1);
+}
+
+
+.info_zhong {
+	padding: 0.25rem 0.4rem 0 0.4rem;
+}
+
+
+.zhong_info {
+	font-size: 0.15rem;
+	font-family: SourceHanSansSC;
+	font-weight: 500;
+	color: rgba(121, 121, 121, 1);
+}
+
+.zhong_info>ol {
+	margin-left: 0.16rem;
+	margin-top: 0.21rem;
+	padding-bottom: 0.25rem;
+}
+
+.zhong_info>ol>li {
+	list-style-type: symbols !important;
+	margin-top: 0.17rem;
+	font-size: 0.15rem;
+	font-family: SourceHanSansSC;
+	font-weight: 300;
+	color: rgba(121, 121, 121, 1);
+}
+
+.info_buttom {
+	height: 0.7rem;
+	width: 100%;
+	border-top: 0.01rem solid #f0f0f0;
+	cursor: pointer;
+}
+
+.red_border {
+	width: 1.02rem;
+	height: 0.29rem;
+	background: rgba(140, 31, 38, 1);
+	margin: 0.17rem 0 0 0.29rem;
+	font-size: 0.17rem;
+	font-family: SourceHanSansSC;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

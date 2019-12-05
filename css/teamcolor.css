@@ -1,0 +1,38 @@
+.team_content{
+	width: 12rem;
+	height: 11rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+
+.limt_annius{
+	display: flex;
+	justify-content: center;
+	margin-top: 0.8rem;
+	font-size: 0.19rem;
+}
+.anniu_border{
+	width: 0.34rem;
+	height: 0.34rem;
+	border: 0.01rem solid;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.anniu_borders_active{
+	background-color: #808080;
+}
+.limt_anniu_left{
+	
+}
+.limt_anniu{
+	margin-left: 0.04rem;
+}
+.limt_anniu_right{
+	margin-left: 0.04rem;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="keywords" content="要挑，要挑APP，要挑官网，要挑购物，要挑会员，要挑客服" />
+		<meta name="description" content="要挑以“生活，就是要，挑好的”为理念，秉承严谨的态度，严控各个生产环节，优选产品，为用户提供母婴玩具、家居日用、美妆个护、新鲜美食等品类精选商品。为用户提供富质感的产品和服务，优化线上购物体验，提升用户生活幸福感。" />
+		<meta name="renderer" content="webkit">
+		<title>人才招聘</title>
+		<link href="images/yaotiao.png" rel="SHORTCUT ICON" /> <!-- title图片 -->
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/person_public.css" />
+	</head>
+	<body>
+		<div v-cloak id="app" style="overflow: hidden;">
+			<banner-one :bigback-colors="colors" big-img="images/topbar_left_bs.png" text-color="#323232" img-src="images/person/bannerperson.png"
+			 banner-height="7.14" :about-yt="aboutYt" @on-links12="onLinksAbout" @out-links12="outLinksAbout" :down-link="downLink"
+			 @on-links22="onLinksHzuo" @out-links22="outLinksHzuo"></banner-one>
+			<div class="content">
+				<div class="main">
+					<a class="a_vip" href="index.html">首页</a>><a class="a_vip" href="">人才招聘</a>
+				</div>
+				<div class="person_content">
+					<div class="text_left">
+						TALENT<br>RECRUITMENT
+					</div>
+					<div class="text_right">
+						<span class="text_right_vip_font_size">凝聚产生力量,团结诞生希望.</span>
+						<span>
+							倾听时，我们儒雅而又睿智； 思考时，我们沉稳而又跳跃；讨论时，我们激烈而又感性； 工作时，我们严谨而又忘我；  怀揣激情和梦
+						</span>
+					</div>
+				</div>
+				<!-- 人才页面的入口 -->
+				<div class="person_go">
+					<a href="linkfunction.html">
+						<div class="person_go_content">
+							<div class="person_go_content_top">
+								<img src="images/person/person1.png">
+							</div>
+							<div class="person_go_content_buttom">
+								<div>
+									<span>
+										CONTACU US
+									</span>
+									<span>
+										联系方式
+									</span>
+									<img src="images/person/ppp.png">
+								</div>
+							</div>
+						</div>
+					</a>
+					<a href="cononinfo.html">
+						<div class="person_go_content">
+							<div class="person_go_content_top">
+								<img src="images/person/person2.png">
+							</div>
+							<div class="person_go_content_buttom">
+								<div>
+									<span>
+										JOB OFFERS
+									</span>
+									<span>
+										招聘信息
+									</span>
+									<img src="images/person/ttt.png">
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<!-- 太难了，没有需求文档咋做啊 -->
+				<div class="main_content_div">
+					<div class="main_content">
+						<div class="text_div">
+							<span>TEAM STYLE</span>
+							<span>
+								<hr > 团队风采 <hr >
+							</span>
+						</div>
+						
+					</div>
+					<div class="img_div">
+						<xu-jiangnan></xu-jiangnan>
+						<xu-jiangnan></xu-jiangnan>
+					</div>
+					<div class="more_team" @click="goMore()">
+						<img src="images/person/rrr.png" >
+						更多动态
+					</div>
+				</div>
+				
+				<buttom-bar></buttom-bar>
+			</div>
+		</div>
+		<script src="js/autorem.js" type="text/javascript"></script>
+		<script src="js/vue.js" type="text/javascript"></script>
+		<script src="js/public.js" type="text/javascript"></script>
+		<script src="js/person.js" type="text/javascript"></script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+.link_content {
+	width: 12rem;
+	margin: 0 auto;
+	margin-top: 0.82rem;
+	border-top: 0.02rem solid #dbdbdb;
+	display: flex;
+	padding-bottom: 3.69rem;
+}
+
+.link_content_left {
+	padding-top: 0.65rem;
+	width: 35%;
+	height: 3.75rem;
+}
+
+.link_content_right {
+	padding-top: 0.65rem;
+	padding-left: 0.92rem;
+	flex: 1;
+	border-left: 0.02rem solid #dbdbdb;
+}
+
+.person_e {
+	font-size: 0.28rem;
+	font-family: SourceHanSansSC;
+	font-weight: bold;
+	color: rgba(169, 88, 93, 1);
+}
+
+.person_texts {
+	font-size: 0.25rem;
+	font-family: SourceHanSansSC;
+	font-weight: 300;
+	color: rgba(183, 183, 183, 1);
+}
+
+ul{
+	margin-top: 0.6rem;
+	display: block;
+	font-size:0.17rem;
+	font-family:SourceHanSansSC;
+	font-weight:300;
+	color:rgba(102,102,102,1);
+	width: 5.20rem;
+	line-height:0.5rem;
+}
+ul>li{
+	list-style-type: none;
+	border-bottom: 0.01rem solid #dbdbdb;
+}

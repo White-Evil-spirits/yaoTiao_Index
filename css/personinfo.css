@@ -1,0 +1,89 @@
+.main_info {
+	width: 12rem;
+	margin: 0 auto;
+	margin-top: 0.22rem;
+	padding: 0.3rem 0.28rem 0.3rem 0.28rem;
+	background-color: white;
+	font-size: 0.35rem;
+	color: red;
+}
+
+.main_info_button {
+	width: 12rem;
+	height: 0.69rem;
+	margin: 0 auto;
+	background-color: #8c1f26;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2.25rem;
+}
+
+.main_info input {
+	display: block;
+	width: 11.45rem;
+	height: 0.72rem;
+	border: 0.01rem solid rgba(181, 181, 181, 1);
+	border-radius: 0.05rem;
+	padding: 0.15rem 0.28rem 0.15rem 0.28rem;
+	font-size: 0.16rem;
+	font-family: SourceHanSansSC;
+	font-weight: 300;
+	color: rgba(201, 201, 201, 1);
+}
+
+textarea {
+	font-size: 0.16rem;
+	width: 11.45rem;
+	height: 1.44rem;
+	border: 0.01rem solid rgba(181, 181, 181, 1);
+	border-radius: 0.05rem;
+	padding: 0.15rem 0.28rem 0.15rem 0.28rem;
+	color: rgba(201, 201, 201, 1);
+}
+
+.main_info li {
+	display: flex;
+	flex-direction: row;
+	font-size: 0.16rem;
+	font-family: SourceHanSansSC;
+	font-weight: 300;
+	color: rgba(50, 50, 50, 1);
+	margin-top: 0.24rem;
+}
+
+.span_color {
+	color: red;
+}
+
+/* 就是不想维护了 -_-*/
+
+.person_go_content_buttom>div {
+	font-size: 0.28rem;
+	font-family: Montserrat;
+	font-weight: 400;
+	color: white;
+	height: 0.33rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.person_go_content_buttom>div>span:nth-child(1) {
+	margin-right: 0.17rem;
+}
+
+.person_go_content_buttom>div>span:nth-child(2) {
+	border-left: 0.04rem solid white;
+	padding-left: 0.17rem;
+}
+
+.person_go_content_buttom>div>img {
+	width: 0.34rem;
+	height: 0.34rem;
+	margin-left: 0.17rem;
+}
+
+
+ 

@@ -30,8 +30,9 @@ new Vue({
 		},
 		setPhp() {
 
-			console.log(this.lianxiren + "-------")
+			
 			var self = this
+			// console.log(this.lianxiren + "-------")
 			//验证用户
 			if (this.names == "") {
 				this.utilcontent = '姓名不能为空'

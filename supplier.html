@@ -19,7 +19,7 @@
 			<!--   -->
 			<open-window ref="openwins" :util-content="utilcontent" v-show="openwin" @closetips="noneOpen"></open-window>				<!-- banner组件1 -->
 			<!-- banner组件1 -->
-			<banner-one :bigback-colors="colors" big-img="images/topbar_left_h.png" text-color="#666666" img-src="images/agent/baner_vip.png" banner-height="7.14"
+			<banner-one :bigback-colors="colors" big-img="images/topbar_left_h.png" text-color="#666666" img-src="images/agent/bang_vips.png" banner-height="7.14"
 			:about-yt="aboutYt" @on-links12="onLinksAbout" @out-links12="outLinksAbout"
 			:down-link="downLink"	@on-links22="onLinksHzuo" @out-links22="outLinksHzuo"
 			></banner-one>
@@ -34,7 +34,7 @@
 					</div>
 					<div class="main_content">
 						<p>
-							要挑作为新型社交电商平台，拥有众多优质会员,在消费升级的背景下，要挑通过专业严苛品控、优质无忧的商家服务，<br> 致力于打造最受欢迎的会员制品牌优享平台， <br>为中国消费者甄选每一件全球优品，为品牌方带来更好的会员电商模式体验。 
+							要挑作为新型社交电商平台，拥有众多优质会员，在消费升级的背景下，要挑通过专业严苛品控、优质无忧的商家服务，<br> 致力于打造最受欢迎的会员制品牌优享平台， <br>为中国消费者甄选每一件全球优品，为品牌方带来更好的会员电商模式体验。 
 						</p>
 					</div>
 				</div>
@@ -46,7 +46,7 @@
 						</div>
 						<div class="title_content">
 							<span>2/</span>
-							<span> 定期组织商家培训，提升商家服务能力，<br> 匹配专属商管，解决商家日常疑问 </span>
+							<span> 定期组织商家培训，<br>提升商家服务能力，<br> 匹配专属商管，解决商家日常疑问 </span>
 						</div>
 						<div class="title_content">
 							<span>3/</span>
@@ -64,7 +64,7 @@
 							</li>
 							<li>
 								商家名称<span style="color: red;">*</span>
-								<input v-model="names" class="text_input" type="text" name="name" id="" value="" placeholder="请输入商家姓名" />
+								<input v-model="names" class="text_input" type="text" name="name" id="" value="" placeholder="请输入商家姓名" maxlength="20" />
 							</li>
 							<li>
 								商家类型(单选）
@@ -88,31 +88,31 @@
 								<input v-model="danxuan"  @click="inputDis(1)" class="cbox" type="radio" name="type" id="" value="6" />其它
 							</li>
 							<li>
-								<input v-model="qitas" disabled="disabled" ref="nonetext" placeholder="其它..." class="text_input" style="width: 100%;height: 0.82rem;" type="text" name="6_content" id="" value="" />
+								<input v-model="qitas" disabled="disabled" ref="nonetext" placeholder="其它..." class="text_input" style="width: 100%;height: 0.82rem;" type="text" name="6_content" id="" value="" maxlength="20" />
 							</li>
 							<li>
 								联系人<span style="color: red;">*</span>
-								<input v-model="lianxiren" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的姓名" />
+								<input v-model="lianxiren" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的姓名" maxlength="20" />
 							</li>
 							<li>
 								联系电话<span style="color: red;">*</span>
-								<input v-model="lianxidianhua" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的电话" />
+								<input v-model="lianxidianhua" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的电话" maxlength="11" />
 							</li>
 							<li>
 								公司地址<span style="color: red;">*</span>
-								<input v-model="gongsiaddr" class="text_input" type="text" name="name" id="" value="" placeholder="请填写公司地址" />
+								<input v-model="gongsiaddr" class="text_input" type="text" name="name" id="" value="" placeholder="请填写公司地址" maxlength="50" />
 							</li>
 							<li>
 								供应品牌<span style="color: red;">*</span>
-								<input v-model="gongyingpinpai" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的品牌名称" />
+								<input v-model="gongyingpinpai" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的品牌名称" maxlength="20" />
 							</li>
 							<li>
 								产品类型<span style="color: red;">*</span>
-								<input v-model="chanpinleixing" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的产品类型" />
+								<input v-model="chanpinleixing" class="text_input" type="text" name="name" id="" value="" placeholder="请填写您的产品类型" maxlength="20" />
 							</li>
 							<li>
 								备注说明
-								<input v-model="beizhu" placeholder="备注..." class="text_input" style="height: 0.82rem;" type="text" name="6_content" id="" value="" />
+								<input v-model="beizhu" placeholder="备注..." class="text_input" style="height: 0.82rem;" type="text" name="6_content" id="" value="" maxlength="20" />
 							</li>
 						</ul>
 					</div>

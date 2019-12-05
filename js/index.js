@@ -40,6 +40,10 @@ new Vue({
 	methods: {
 		swiper() {
 			var swiper = new Swiper('#swiper1', {
+				autoplay: {
+					delay: 2000,
+					disableOnInteraction: false,
+				},
 				slidesPerView: 3,
 				slidesPerGroup: 1,
 				// spaceBetween: 30,
