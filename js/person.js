@@ -7,7 +7,7 @@ new Vue({
 	},
 	methods: {
 		goMore(){
-			console.log(1)
+			location.href = "teamcolor.html"
 		}
 	}
 })

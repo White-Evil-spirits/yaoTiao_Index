@@ -1,6 +1,51 @@
+Vue.component('renJixue', {
+
+})
+
+Vue.component('xuJiangnan', {
+	props: {
+		dateSs: {
+			type: String,
+			default: "29"
+		},
+		edateSs: {
+			type: String,
+			default: "月份"
+		},
+		imgSrc: {
+			type: String,
+			default: "images/xxx.png"
+		},
+		mainContent: {
+			type: String,
+			default: "团队活动的内容文字团队,活动的内容文字"
+		}
+	},
+	template: `
+		<div class="img_team_contents">
+			<div class="img_team_content">
+				<img :src="imgSrc" >
+			</div>
+			<div class="img_team_text">
+				<div class="riqi">
+					<span>{{dateSs}}</span>
+					<span>{{edateSs}}</span>
+				</div>
+				<div class="riqi_main">
+					<span>2019-10</span>
+					<span>{{mainContent}}</span>
+				</div>
+			</div>
+		</div>
+	`
+})
 /* toubu全局组件 */
 Vue.component('topBar', {
 	created() {
+		console.log(
+			"\n          _____                    _____                    _____                    _____          \n         /\\    \\                  /\\    \\                  /\\    \\                  /\\    \\         \n        /::\\____\\                /::\\    \\                /::\\    \\                /::\\    \\        \n       /:::/    /                \\:::\\    \\              /::::\\    \\              /::::\\    \\       \n      /:::/    /                  \\:::\\    \\            /::::::\\    \\            /::::::\\    \\      \n     /:::/    /                    \\:::\\    \\          /:::/\\:::\\    \\          /:::/\\:::\\    \\     \n    /:::/____/                      \\:::\\    \\        /:::/__\\:::\\    \\        /:::/__\\:::\\    \\    \n   /::::\\    \\                      /::::\\    \\      /::::\\   \\:::\\    \\      /::::\\   \\:::\\    \\   \n  /::::::\\    \\   _____    ____    /::::::\\    \\    /::::::\\   \\:::\\    \\    /::::::\\   \\:::\\    \\  \n /:::/\\:::\\    \\ /\\    \\  /\\   \\  /:::/\\:::\\    \\  /:::/\\:::\\   \\:::\\____\\  /:::/\\:::\\   \\:::\\    \\ \n/:::/  \\:::\\    /::\\____\\/::\\   \\/:::/  \\:::\\____\\/:::/  \\:::\\   \\:::|    |/:::/__\\:::\\   \\:::\\____\\\n\\::/    \\:::\\  /:::/    /\\:::\\  /:::/    \\::/    /\\::/   |::::\\  /:::|____|\\:::\\   \\:::\\   \\::/    /\n \\/____/ \\:::\\/:::/    /  \\:::\\/:::/    / \\/____/  \\/____|:::::\\/:::/    /  \\:::\\   \\:::\\   \\/____/ \n          \\::::::/    /    \\::::::/    /                 |:::::::::/    /    \\:::\\   \\:::\\    \\     \n           \\::::/    /      \\::::/____/                  |::|\\::::/    /      \\:::\\   \\:::\\____\\    \n           /:::/    /        \\:::\\    \\                  |::| \\::/____/        \\:::\\   \\::/    /    \n          /:::/    /          \\:::\\    \\                 |::|  ~|               \\:::\\   \\/____/     \n         /:::/    /            \\:::\\    \\                |::|   |                \\:::\\    \\         \n        /:::/    /              \\:::\\____\\               \\::|   |                 \\:::\\____\\        \n        \\::/    /                \\::/    /                \\:|   |                  \\::/    /        \n         \\/____/                  \\/____/                  \\|___|                   \\/____/         \n\n"
+		)
+
 		/* 
 		 
 		 
@@ -87,43 +132,7 @@ Vue.component('topBar', {
 	`
 })
 /* --------------------------------------------- */
-Vue.component('xuJiangnan', {
-	props: {
-		dateSs: {
-			type: String,
-			default: "29"
-		},
-		edateSs: {
-			type: String,
-			default: "月份"
-		},
-		imgSrc: {
-			type: String,
-			default: "images/person/xxx.png"
-		},
-		mainContent: {
-			type: String,
-			default: "团队活动的内容文字团队,活动的内容文字"
-		}
-	},
-	template: `
-		<div class="img_team_contents">
-			<div class="img_team_content">
-				<img :src="imgSrc" >
-			</div>
-			<div class="img_team_text">
-				<div class="riqi">
-					<span>{{dateSs}}</span>
-					<span>{{edateSs}}</span>
-				</div>
-				<div class="riqi_main">
-					<span>2019-10</span>
-					<span>{{mainContent}}</span>
-				</div>
-			</div>
-		</div>
-	`
-})
+
 /* 底部 */
 Vue.component('buttomBar', {
 	template: `<div class="buttomBar">
@@ -244,7 +253,7 @@ Vue.component('bannerOne', {
 	props: {
 		imgSrc: {
 			type: String,
-			default: 'images/aboutYaotiao/banner.png'
+			default: 'images/banner.png'
 		},
 		bigImg: {
 			type: String,
@@ -300,7 +309,7 @@ Vue.component('limtUtil', {
 		},
 		imgSrc: {
 			type: String,
-			default: 'images/yaotiaoJournalism/55@2x.png'
+			default: 'images/55@2x.png'
 		}
 	},
 	template: ` <div class="limt_contents">
@@ -345,6 +354,9 @@ Vue.component('openWindow', {
 var Mixins = {
 	// el: "#app",
 	data: {
+		//图片路径
+		ossAddr:"images/",
+		loadings: false,
 		name: "",
 		phone: "",
 		remarks: "",
@@ -377,12 +389,16 @@ var Mixins = {
 		}
 	},
 	methods: {
+		loadings_mounted(){
+			var myspin = new SpinLoading('demo', { text: '上传中...' });
+			console.log("loading.....")
+		},
 		/* 测试 */
 		isOuts() {
 			//----------------------内网转外网
 			this.isOut = 0;
 			if (this.isOut == 0) {
-				this.requestBs = "http://192.168.6.231:8088"
+				this.requestBs = "http://60.205.184.22:8088"
 			}
 			if (this.isOut == 1) {
 				this.requestBs = "https://api.yaotiao.net"
@@ -454,26 +470,35 @@ var Mixins = {
 			options = options || {};
 			options.type = (options.type || "GET").toUpperCase();
 			options.dataType = options.dataType || "json";
-			var params = this.formatParams(options.data);
 			//创建xhr对象 - 非IE6
 			if (window.XMLHttpRequest) {
 				var xhr = new XMLHttpRequest();
 			} else { //IE6及其以下版本浏览器
 				var xhr = new ActiveXObject('Microsoft.XMLHTTP');
 			}
-			xhr.timeout = 3000;
+			xhr.timeout = 30000;
 			xhr.ontimeout = function(event) {
 				alert('请求超时！');
 			}
-
+			var params;
 			//GET POST 两种请求方式
 			if (options.type == "GET") {
+				params = this.formatParams(options.data);
 				xhr.open("GET", options.url + "?" + params, true);
 				xhr.send(null);
 			} else if (options.type == "POST") {
-				xhr.open("POST", options.url, true);
+				if (options.data instanceof FormData) {
+					xhr.open("POST", options.url, true);
+					params = options.data;
+				} else {
+					xhr.open("POST", options.url, true);
+					params = this.formatParams(options.data);
+					// params = options.data;
+					xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				}
 				//设置表单提交时的内容类型
-				xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+				// xhr.setRequestHeader("Content-Type", "multipart/form-data");
+				// xhr.setRequestHeader("Accept", "application/json,text/plain,*/*");
 				xhr.send(params);
 			}
 			//接收

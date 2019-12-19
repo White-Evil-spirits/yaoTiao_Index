@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<META HTTP-EQUIV="pragma" CONTENT="no-cache">
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+		<META HTTP-EQUIV="expires" CONTENT="0">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<meta name="keywords" content="要挑，要挑APP，要挑官网，要挑购物，要挑会员，要挑客服" />
@@ -10,23 +13,26 @@
 		<link href="images/yaotiao.png" rel="SHORTCUT ICON" /> <!-- title图片 -->
 		<link rel="stylesheet" type="text/css" href="css/public.css" />
 		<link rel="stylesheet" type="text/css" href="css/personinfo.css" />
+		<link rel="stylesheet" type="text/css" href="css/spin.css" />
 	</head>
 	<body style="background-color: #f2f2f2;">
 		<div id="app" style="overflow: hidden;">
+			<div id="tankuang" v-show="loadings">
+				<div id="demo"></div>
+			</div>
 			<open-window ref="openwins" :util-content="utilcontent" v-show="openwin" @closetips="noneOpen"></open-window>
-			<top-bar :bigback-color="colors" text-color="black" big-img="images/topbar_left_b.png" :about-yt="aboutYt"
+			<top-bar :bigback-color="colors" text-color="black" :big-img="ossAddr+'topbar_left_b.png'" :about-yt="aboutYt"
 			 @on-links1="onLinksAbout" @out-links1="outLinksAbout" :down-link="downLink" @on-links2="onLinksHzuo" @out-links2="outLinksHzuo">
 			</top-bar>
 			<div class="banners_vip" style="margin-top: 0.92rem;">
-				<img src="images/person/hhhh.png">
+				<img :src="ossAddr+'hhhh.png'">
 			</div>
-
 			<div class="content">
 				<div class="main">
 					<a class="a_vip" href="index.html">首页</a>><a class="a_vip" href="person.html">人才招聘</a>><a class="a_vip" href="">简历投递</a>
 				</div>
 				<div class="jianli_top">
-					<img src="images/person/yt.png">
+					<img :src="ossAddr+'yt.png'">
 				</div>
 				<div class="main_info">
 					<ul>
@@ -40,10 +46,10 @@
 							性别
 						</li>
 						<li>
-							<input v-model="sex" style="width: auto; height: auto;" type="radio" name="sex" id="" value="0" />&nbsp;&nbsp;男
+							<input v-model="sex" style="width: auto; height: auto;" type="radio" name="sex" id="" value="1" />&nbsp;&nbsp;男
 						</li>
 						<li>
-							<input v-model="sex" style="width: auto; height: auto;" type="radio" name="sex" id="" value="1" />&nbsp;&nbsp;女
+							<input v-model="sex" style="width: auto; height: auto;" type="radio" name="sex" id="" value="2" />&nbsp;&nbsp;女
 						</li>
 						<li>
 							<input v-model="chusheng" type="text" name="chusheng" id="" value="" placeholder="出生年月" /><span class="span_color">&nbsp;*</span>
@@ -76,7 +82,9 @@
 							<span class="">我的简历</span>
 						</li>
 						<li>
-							<input style="width: auto; height: auto;" type="file" name="upfile" id="" value="" />
+							<!-- accept=".docx" -->
+							<input @change="upfiles()" accept=".docx" id="files_upfile" style="width: auto; height: auto;" type="file" name="upfile"
+							 value="" />
 						</li>
 					</ul>
 				</div>
@@ -89,7 +97,7 @@
 							<span>
 								提交
 							</span>
-							<img src="images/person/w.png">
+							<img :src="ossAddr+'w.png'">
 						</div>
 					</div>
 				</div>
@@ -98,6 +106,7 @@
 		</div>
 		<script src="js/autorem.js" type="text/javascript"></script>
 		<script src="js/vue.js" type="text/javascript"></script>
+		<script src="js/spin.js" type="text/javascript"></script>
 		<script src="js/public.js" type="text/javascript"></script>
 		<script src="js/personinfo.js" type="text/javascript"></script>
 	</body>

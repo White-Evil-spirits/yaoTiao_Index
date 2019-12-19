@@ -13,11 +13,11 @@
 	</head>
 	<body>
 		<div  id="app" style="overflow: hidden;">
-			<top-bar :bigback-color="colors" text-color="black" big-img="images/topbar_left_b.png" :about-yt="aboutYt" @on-links1="onLinksAbout" @out-links1="outLinksAbout"
+			<top-bar :bigback-color="colors" text-color="black" :big-img="ossAddr+'topbar_left_b.png'" :about-yt="aboutYt" @on-links1="onLinksAbout" @out-links1="outLinksAbout"
 			:down-link="downLink" @on-links2="onLinksHzuo" @out-links2="outLinksHzuo">
 			</top-bar>
 			<div class="banners_vip" style="margin-top: 0.92rem;">
-				<img src="images/person/banners.png" >
+				<img :src="ossAddr+'banners.png'" >
 			</div>
 			
 			<div class="content" >

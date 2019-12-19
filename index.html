@@ -13,7 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<!-- 引入css -->
 		<!-- 查询引入 最大 -->
-		<!-- <link rel="stylesheet" media="(min-width:993px) and (max-width:2000px)" href="css/index-tow.css"> -->
+		<!-- <link rel="stylesheet" media="(min-width:993px) and (max-width:2000px)" href="css-tow.css"> -->
 	</head>
 	<style type="text/css">
 		
@@ -30,8 +30,8 @@
 					就是要，挑好的！
 				</div>
 				<div class="erweima">
-					<img src="images/index/ios.png">
-					<img src="images/index/an.png">
+					<img :src="ossAddr+'ios.png'">
+					<img :src="ossAddr+'an.png'">
 				</div>
 				<div class="bannerButton">
 					<div>
@@ -49,7 +49,7 @@
 				</div>
 				<div class="fourContent">
 					<div class="fourDiv" @mouseenter="div1=true" @mouseleave="div1=false">
-						<img src="images/index/you.png">
+						<img :src="ossAddr+'yous.png'">
 						<span>甄选好物</span>
 						<transition name="goon">
 							<div class="fourDiv postion" v-if="div1">
@@ -64,7 +64,7 @@
 						</transition>
 					</div>
 					<div class="fourDiv" @mouseenter="div2=true" @mouseleave="div2=false">
-						<img src="images/index/wuyou.png">
+						<img :src="ossAddr+'wuyou.png'">
 						<span>无忧服务</span>
 						<transition name="goon">
 							<div class="fourDiv postion" v-if="div2">
@@ -79,7 +79,7 @@
 						</transition>
 					</div>
 					<div class="fourDiv" @mouseenter="div3=true" @mouseleave="div3=false">
-						<img src="images/index/shang2.png">
+						<img :src="ossAddr+'shang2.png'">
 						<span>流量无上限</span>
 						<transition name="goon">
 							<div class="fourDiv postion" v-if="div3">
@@ -94,7 +94,7 @@
 						</transition>
 					</div>
 					<div class="fourDiv" @mouseenter="div4=true" @mouseleave="div4=false">
-						<img src="images/index/gou2.png">
+						<img :src="ossAddr+'gou2.png'">
 						<span>产品为王</span>
 						<transition name="goon">
 							<div class="fourDiv postion" v-if="div4">
@@ -137,20 +137,20 @@
 			<div class="content3">
 				COOPERATIVE&nbsp;&nbsp;BRAND&nbsp;&nbsp;合作品牌
 				<div class="content3-img">
-					<img src="images/index/i1.png" alt="">
-					<img src="images/index/i2.png" alt="">
-					<img src="images/index/i3.png" alt="">
-					<img src="images/index/i4.png" alt="">
-					<img src="images/index/i5.png" alt="">
-					<img src="images/index/i6.png" alt="">
-					<img src="images/index/i7.png" alt="">
-					<img src="images/index/i8.png" alt="">
-					<img src="images/index/i9.png" alt="">
-					<img src="images/index/i10.png" alt="">
-					<img src="images/index/i11.png" alt="">
-					<img src="images/index/i12.png" alt="">
-					<img src="images/index/i13.png" alt="">
-					<img src="images/index/i14.png" alt="">
+					<img :src="ossAddr+'i1.png'" alt="">
+					<img :src="ossAddr+'i2.png'" alt="">
+					<img :src="ossAddr+'i3.png'" alt="">
+					<img :src="ossAddr+'i4.png'" alt="">
+					<img :src="ossAddr+'i5.png'" alt="">
+					<img :src="ossAddr+'i6.png'" alt="">
+					<img :src="ossAddr+'i7.png'" alt="">
+					<img :src="ossAddr+'i8.png'" alt="">
+					<img :src="ossAddr+'i9.png'" alt="">
+					<img :src="ossAddr+'i10.png'" alt="">
+					<img :src="ossAddr+'i11.png'" alt="">
+					<img :src="ossAddr+'i12.png'" alt="">
+					<img :src="ossAddr+'i13.png'" alt="">
+					<img :src="ossAddr+'i14.png'" alt="">
 				</div>
 				<div class="content3-title">
 					NEWS&nbsp;&nbsp;INFORMATION&nbsp;&nbsp;新闻动态

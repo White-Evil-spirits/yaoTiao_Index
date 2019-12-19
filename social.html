@@ -13,8 +13,11 @@
 	</head>
 	<body>
 		<div id="app">
+			<!-- ban.png -->
 			<!-- banner组件1 -->
-			<banner-one :bigback-colors="colors" img-src="images/shehui/ban.png" banner-height="7.14"></banner-one>
+			<banner-one :bigback-colors="colors"  banner-height="7.14"  :img-src="ossAddr+'ban.png'" banner-height="7.14"
+			:about-yt="aboutYt" @on-links12="onLinksAbout" @out-links12="outLinksAbout"
+			:down-link="downLink"	@on-links22="onLinksHzuo" @out-links22="outLinksHzuo"></banner-one>
 			<div class="content">
 				<div class="main">
 					<a class="a_vip" href="index.html" >首页</a>><a class="a_vip" href="aboutYaotiao.html">关于要挑</a>><a class="a_vip" href="#">社会责任</a>
@@ -28,9 +31,9 @@
 						 要挑将深耕农副产品供应链，走进田间地头依据当地产品特色，定制产品推广策略，划定定向人群，<br>专频、专题、专页深度布局生鲜及农副产品呈现渠道，极力促进偏远农村特色产品销售，<br>长期帮扶农村贫困地区发展产业经济，放大产业效应。积极实践及持续落实精准扶贫的国家政策方针，<br>帮助贫困地区农户真正实现“丰收”，持续扶持带动偏远农村经济发展，助力打赢脱贫攻坚战。 
 					</p>
 					<div class="imge">
-						<img src="images/companyProfile/108@2x.png">
-						<img src="images/companyProfile/108@2x.png">
-						<img src="images/companyProfile/108@2x.png">
+						<img :src="ossAddr+'108@2x.png'">
+						<img :src="ossAddr+'108@2x.png'">
+						<img :src="ossAddr+'108@2x.png'">
 					</div>
 				</div>
 				<buttom-bar></buttom-bar>

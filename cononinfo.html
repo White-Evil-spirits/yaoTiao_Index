@@ -14,11 +14,11 @@
 	<body>
 		<div id="app" style="overflow: hidden;">
 			<open-window ref="openwins" :util-content="utilcontent" v-show="openwin" @closetips="noneOpen"></open-window>
-			<top-bar :bigback-color="colors" text-color="black" big-img="images/topbar_left_b.png" :about-yt="aboutYt"
+			<top-bar :bigback-color="colors" text-color="black" :big-img="ossAddr+'topbar_left_b.png'" :about-yt="aboutYt"
 			 @on-links1="onLinksAbout" @out-links1="outLinksAbout" :down-link="downLink" @on-links2="onLinksHzuo" @out-links2="outLinksHzuo">
 			</top-bar>
 			<div class="banners_vip" style="margin-top: 0.92rem;">
-				<img src="images/person/hhhh.png">
+				<img :src="ossAddr+'hhhh.png'">
 			</div>
 
 			<div class="content" style="background-color: #f2f2f2;">
@@ -27,7 +27,7 @@
 						<a class="a_vip" href="index.html">首页</a>><a class="a_vip" href="person.html">人才招聘</a>><a class="a_vip" href="">招聘信息</a>
 					</div>
 					<div class="jianli_top">
-						<img src="images/person/yt.png">
+						<img :src="ossAddr+'yt.png'">
 					</div>
 					<div class="main_info">
 						<div class="info_top">

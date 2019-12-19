@@ -14,7 +14,7 @@
 	<body>
 		<div id="app">
 			<!-- banner组件1 -->
-			<banner-one :bigback-colors="colors" img-src="images/Vip/bang.png" banner-height="7.14"  img-src="images/agent/baner_vip.png" banner-height="7.14"
+			<banner-one :bigback-colors="colors" :img-src="ossAddr+'bang.png'" banner-height="7.14"  :img-src="ossAddr+'baner_vip.png'" banner-height="7.14"
 			:about-yt="aboutYt" @on-links12="onLinksAbout" @out-links12="outLinksAbout"
 			:down-link="downLink"	@on-links22="onLinksHzuo" @out-links22="outLinksHzuo"></banner-one>
 			<div class="content">
@@ -25,10 +25,10 @@
 					<div class="content_top">
 						成为会员挑手<br>即刻尊享专属权益
 					</div>
-					<img class="img1" src="images/Vip/hello.png" >
-					<img class="img2" src="images/Vip/gril.png" >
-					<img class="img3" src="images/Vip/men.png" >
-					<img class="img4" src="images/Vip/what.png" >
+					<img class="img1" :src="ossAddr+'hello.png'" >
+					<img class="img2" :src="ossAddr+'gril.png'" >
+					<img class="img3" :src="ossAddr+'men.png'" >
+					<img class="img4" :src="ossAddr+'what.png'" >
 					<div class="content_text">
 						<div class="title_content" style="margin-top: 0;">
 							<span>1/</span>

@@ -12,8 +12,9 @@
 }
 
 [v-cloak] {
-  display: none;
+	display: none;
 }
+
 html,
 body {
 	width: 100%;
@@ -23,6 +24,9 @@ body {
 
 input {
 	outline: none;
+	border-radius: 0;
+	/* -webkit-appearance: none; */
+	-webkit-border-radius: 0px;
 }
 
 a {
@@ -301,8 +305,6 @@ a {
 }
 
 
-
-
 /* 所有页面的form  组件样式*/
 .content {
 	width: 100%;
@@ -554,12 +556,12 @@ a {
 
 
 /* 人才招聘公共 */
-.banners_vip{
+.banners_vip {
 	margin-top: 0.92rem;
-	
+
 }
 
-.banners_vip>img{
+.banners_vip>img {
 	width: 100%;
 	height: 100%;
 	display: block;
@@ -607,7 +609,7 @@ a {
 
 }
 
-.jianli_top{
+.jianli_top {
 	width: 12rem;
 	height: 1.47rem;
 	background-color: #8c1f26;
@@ -617,7 +619,8 @@ a {
 	justify-content: center;
 	align-items: center;
 }
-.jianli_top>img{
+
+.jianli_top>img {
 	width: 2.94rem;
 	height: 0.51rem;
 }
@@ -669,13 +672,27 @@ a {
 }
 
 .riqi_main>span:nth-child(1) {
-	font-size:0.15rem;
-	font-family:SourceHanSansSC;
-	font-weight:400;
+	font-size: 0.15rem;
+	font-family: SourceHanSansSC;
+	font-weight: 400;
 }
 
 .riqi_main>span:nth-child(2) {
-	font-size:0.2rem;
-	font-family:SourceHanSansSC;
-	font-weight:300;
+	font-size: 0.2rem;
+	font-family: SourceHanSansSC;
+	font-weight: 300;
+}
+
+
+#tankuang {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 99999999999999999999999;
+	background-color: rgba(128, 128, 128, 0.5);
+}
+
+#demo {
+	position: relative;
+	top: 40%;
 }

@@ -2,7 +2,7 @@ Vue.component('lunBo', {
 	props: {
 		imgSrc: {
 			type: String,
-			default: 'images/yaotiaoJournalism/55@2x.png',
+			default: 'images/55@2x.png',
 		},
 		utilContent: {
 			type: String,

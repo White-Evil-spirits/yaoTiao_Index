@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<div v-cloak id="app" style="overflow: hidden;">
-			<banner-one :bigback-colors="colors" big-img="images/topbar_left_bs.png" text-color="#323232" img-src="images/person/bannerperson.png"
+			<banner-one :bigback-colors="colors" :big-img="ossAddr+'topbar_left_bs.png'" text-color="#323232" :img-src="ossAddr+'bannerperson.png'"
 			 banner-height="7.14" :about-yt="aboutYt" @on-links12="onLinksAbout" @out-links12="outLinksAbout" :down-link="downLink"
 			 @on-links22="onLinksHzuo" @out-links22="outLinksHzuo"></banner-one>
 			<div class="content">
@@ -36,7 +36,7 @@
 					<a href="linkfunction.html">
 						<div class="person_go_content">
 							<div class="person_go_content_top">
-								<img src="images/person/person1.png">
+								<img :src="ossAddr+'person1.png'">
 							</div>
 							<div class="person_go_content_buttom">
 								<div>
@@ -46,7 +46,7 @@
 									<span>
 										联系方式
 									</span>
-									<img src="images/person/ppp.png">
+									<img :src="ossAddr+'ppp.png'">
 								</div>
 							</div>
 						</div>
@@ -54,7 +54,7 @@
 					<a href="cononinfo.html">
 						<div class="person_go_content">
 							<div class="person_go_content_top">
-								<img src="images/person/person2.png">
+								<img :src="ossAddr+'person2.png'">
 							</div>
 							<div class="person_go_content_buttom">
 								<div>
@@ -64,7 +64,7 @@
 									<span>
 										招聘信息
 									</span>
-									<img src="images/person/ttt.png">
+									<img :src="ossAddr+'ttt.png'">
 								</div>
 							</div>
 						</div>
@@ -86,7 +86,7 @@
 						<xu-jiangnan></xu-jiangnan>
 					</div>
 					<div class="more_team" @click="goMore()">
-						<img src="images/person/rrr.png" >
+						<img :src="ossAddr+'rrr.png'" >
 						更多动态
 					</div>
 				</div>

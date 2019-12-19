@@ -14,7 +14,9 @@
 	<body>
 		<div id="app">
 			<!-- banner组件1 -->
-			<banner-one :bigback-colors="colors" img-src="images/companyProfile/qiyejieshao.png" banner-height="7.14"></banner-one>
+			<banner-one :bigback-colors="colors"  banner-height="7.14"  :img-src="ossAddr+'qiyejieshao.png'" banner-height="7.14"
+			:about-yt="aboutYt" @on-links12="onLinksAbout" @out-links12="outLinksAbout"
+			:down-link="downLink"	@on-links22="onLinksHzuo" @out-links22="outLinksHzuo"></banner-one>
 			<div class="content">
 				<div class="main">
 					<a class="a_vip" href="index.html" >首页</a>><a class="a_vip" href="">关于要挑</a>><a class="a_vip" href="">企业简介</a>
@@ -31,9 +33,9 @@
 						公司一直秉持“以挑剔的态度，为中国消费者甄选每一件全球优品”为企业使命， <br>以责任、诚信、自律、价值、感恩、利他为企业价值观，打造极致的用户体验和购物体验， <br>为不断提升人们的生活幸福感而不懈努力。
 					</p>
 					<div class="imge">
-						<img src="images/companyProfile/108@2x.png">
-						<img src="images/companyProfile/108@2x.png">
-						<img src="images/companyProfile/108@2x.png">
+						<img :src="ossAddr+'108@2x.png'">
+						<img :src="ossAddr+'108@2x.png'">
+						<img :src="ossAddr+'108@2x.png'">
 					</div>
 				</div>
 				<buttom-bar></buttom-bar>

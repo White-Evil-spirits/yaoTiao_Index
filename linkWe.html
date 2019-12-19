@@ -22,7 +22,7 @@
 		<div id="app">
 			<open-window ref="openwins" :util-content="utilcontent" v-show="openwin" @closetips="noneOpen"></open-window>				<!-- banner组件1 -->
 				
-				<banner-one :bigback-colors="colors" img-src="images/linkWe/banners.png" banner-height="7.14"  img-src="images/agent/baner_vip.png" banner-height="7.14"
+				<banner-one :bigback-colors="colors" :img-src="ossAddr+'banners.png'" banner-height="7.14"  :img-src="ossAddr+'baner_vip.png'" banner-height="7.14"
 				:about-yt="aboutYt" @on-links12="onLinksAbout" @out-links12="outLinksAbout"
 				:down-link="downLink"	@on-links22="onLinksHzuo" @out-links22="outLinksHzuo"></banner-one>
 				<div class="content">
@@ -39,19 +39,19 @@
 										姓名
 										<input v-model="name" type="text" name="" id="" maxlength="10" />
 										<span style="color:red; float: right;">*</span>
-										<img src="images/linkWe/soild.png" >
+										<img :src="ossAddr+'soild.png'" >
 										
 									</div>
 									<div class="name">
 										联系电话
 										<input v-model="phone" type="text" name="" id="" value=""  maxlength="11"/>
 										<span style="color:red; float: right;">*</span>
-										<img src="images/linkWe/soild.png" >
+										<img :src="ossAddr+'soild.png'" >
 									</div>
 									<div class="name">
 										备注说明
 										<input v-model="remarks" type="text" name="" id="" value="" maxlength="30" />
-										<img src="images/linkWe/soild.png" >
+										<img :src="ossAddr+'soild.png'" >
 									</div>
 									<div class="form_button">
 										<input type="button" name="" id="" value="提交" @click="setForms(2)"/>

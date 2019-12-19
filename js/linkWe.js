@@ -8,7 +8,10 @@ new Vue({
 
 	},
 	mounted() {
-		this.newBaiDuMap()
+		var self = this;
+		setTimeout(function() {
+			self.newBaiDuMap()
+		}, 500);
 	},
 	methods: {
 		newBaiDuMap() {
