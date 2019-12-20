@@ -287,6 +287,8 @@ a {
 .buttomBar-friendship {
 	display: flex;
 	flex-direction: row;
+	width: 5rem;
+	justify-content: space-between;
 }
 
 .buttomBar-friendship span {
