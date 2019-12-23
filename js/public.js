@@ -354,8 +354,8 @@ var Mixins = {
 	// el: "#app",
 	data: {
 		//oss图片路径--
-		ossAddr: "images/",
-		// ossAddr:"osss/",
+		// ossAddr: "images/",
+		ossAddr:"http://img.yaotiao.net/yaotiao/guanwang/images/",
 		loadings: false,
 		name: "",
 		phone: "",

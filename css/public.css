@@ -105,7 +105,7 @@ a {
 
 #aDownLink>a>span {
 	display: block;
-	padding: 0.14rem 0.75rem 0.14rem 0.3rem;
+	padding: 0.14rem 0 0.14rem 0.3rem;
 	font-size: 0.14rem;
 	font-family: SourceHanSansSC;
 	font-weight: 500;
