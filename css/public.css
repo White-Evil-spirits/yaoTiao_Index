@@ -63,6 +63,7 @@ a {
 .leftImg {
 	height: 0.38rem;
 	width: 0.78rem;
+	cursor: pointer;
 }
 
 .rightText {
