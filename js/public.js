@@ -1,6 +1,4 @@
-Vue.component('renJixue', {
 
-})
 
 Vue.component('xuJiangnan', {
 	props: {
@@ -45,7 +43,7 @@ Vue.component('topBar', {
 		console.log(
 			"\n          _____                    _____                    _____                    _____          \n         /\\    \\                  /\\    \\                  /\\    \\                  /\\    \\         \n        /::\\____\\                /::\\    \\                /::\\    \\                /::\\    \\        \n       /:::/    /                \\:::\\    \\              /::::\\    \\              /::::\\    \\       \n      /:::/    /                  \\:::\\    \\            /::::::\\    \\            /::::::\\    \\      \n     /:::/    /                    \\:::\\    \\          /:::/\\:::\\    \\          /:::/\\:::\\    \\     \n    /:::/____/                      \\:::\\    \\        /:::/__\\:::\\    \\        /:::/__\\:::\\    \\    \n   /::::\\    \\                      /::::\\    \\      /::::\\   \\:::\\    \\      /::::\\   \\:::\\    \\   \n  /::::::\\    \\   _____    ____    /::::::\\    \\    /::::::\\   \\:::\\    \\    /::::::\\   \\:::\\    \\  \n /:::/\\:::\\    \\ /\\    \\  /\\   \\  /:::/\\:::\\    \\  /:::/\\:::\\   \\:::\\____\\  /:::/\\:::\\   \\:::\\    \\ \n/:::/  \\:::\\    /::\\____\\/::\\   \\/:::/  \\:::\\____\\/:::/  \\:::\\   \\:::|    |/:::/__\\:::\\   \\:::\\____\\\n\\::/    \\:::\\  /:::/    /\\:::\\  /:::/    \\::/    /\\::/   |::::\\  /:::|____|\\:::\\   \\:::\\   \\::/    /\n \\/____/ \\:::\\/:::/    /  \\:::\\/:::/    / \\/____/  \\/____|:::::\\/:::/    /  \\:::\\   \\:::\\   \\/____/ \n          \\::::::/    /    \\::::::/    /                 |:::::::::/    /    \\:::\\   \\:::\\    \\     \n           \\::::/    /      \\::::/____/                  |::|\\::::/    /      \\:::\\   \\:::\\____\\    \n           /:::/    /        \\:::\\    \\                  |::| \\::/____/        \\:::\\   \\::/    /    \n          /:::/    /          \\:::\\    \\                 |::|  ~|               \\:::\\   \\/____/     \n         /:::/    /            \\:::\\    \\                |::|   |                \\:::\\    \\         \n        /:::/    /              \\:::\\____\\               \\::|   |                 \\:::\\____\\        \n        \\::/    /                \\::/    /                \\:|   |                  \\::/    /        \n         \\/____/                  \\/____/                  \\|___|                   \\/____/         \n\n"
 		)
-		
+
 		/* 
 		 
 		 
@@ -239,7 +237,7 @@ Vue.component('buttomBar', {
 						<a href=""></a>
 						<a href=""></a>
 					</div>
-					<p style="margin-top: 0.15rem;">Copyright @ 2011-2017 xx xx xx All Rights Reserved. 琼ICP备15003371号-12 版权所有</p>
+					<p style="margin-top: 0.15rem;"> Copyright© 2014-2019 啄木鸟信息科技有限公司  鲁ICP备 16034488号-3</p>
 				</div>
 			</div>`
 })
@@ -248,8 +246,8 @@ Vue.component('buttomBar', {
 /* toubu全局组件 */
 Vue.component('bannerOne', {
 	created() {
-		
-		console.log(this.bigbackColor);
+
+		// console.log(this.bigbackColor);
 	},
 	props: {
 		imgSrc: {
@@ -313,14 +311,14 @@ Vue.component('limtUtil', {
 			default: 'images/55@2x.png'
 		}
 	},
-	template: ` <div class="limt_contents">
+	template: ` <a href="newJournalismShow.html"><div class="limt_contents">
 					<img :src="imgSrc">
 					<div class="limt_contents_buttom">
 						<p>
 							{{utilContent}}
 						</p>
 					</div>
-				</div>`
+				</div></a>`
 });
 
 
@@ -356,8 +354,8 @@ var Mixins = {
 	// el: "#app",
 	data: {
 		//oss图片路径--
-		ossAddr:"images/",
-		// ossAddr:"C:/Users/123/Desktop/oss/",
+		ossAddr: "images/",
+		// ossAddr:"osss/",
 		loadings: false,
 		name: "",
 		phone: "",
@@ -391,8 +389,10 @@ var Mixins = {
 		}
 	},
 	methods: {
-		loadings_mounted(){
-			var myspin = new SpinLoading('demo', { text: '上传中...' });
+		loadings_mounted() {
+			var myspin = new SpinLoading('demo', {
+				text: '上传中...'
+			});
 			console.log("loading.....")
 		},
 		/* 测试 */
@@ -403,7 +403,7 @@ var Mixins = {
 				this.requestBs = "http://60.205.184.22:8088"
 			}
 			if (this.isOut == 1) {
-				this.requestBs = "https://api.yaotiao.net"
+				this.requestBs = "https://api.test"
 			}
 		},
 		/* 正则验证 */
@@ -536,6 +536,11 @@ var Mixins = {
 		},
 		outLinksHzuo() {
 			this.downLink = false
+		},
+		//tiao新闻业
+		goNew() {
+			console.log(1)
+			location.href = "newJournalismShow.html"
 		}
 	}
 }

@@ -41,9 +41,10 @@ new Vue({
 		swiper() {
 			var swiper = new Swiper('#swiper1', {
 				autoplay: {
-					delay: 2000,
+					delay: 2500,
 					disableOnInteraction: false,
 				},
+				preventClicks: false,
 				slidesPerView: 3,
 				slidesPerGroup: 1,
 				// spaceBetween: 30,
@@ -55,11 +56,10 @@ new Vue({
 				}
 			});
 		},
-		goXwen(){
-			console.log(1)
+		goXwen() {
+
 			location.href = "yaotiaoJournalism.html"
 		}
+		//    		swiper.slideTo(index);
 	}
 })
-
-

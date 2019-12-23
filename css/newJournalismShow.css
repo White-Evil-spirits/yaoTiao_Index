@@ -1,0 +1,121 @@
+.soi {
+	height: 0.02rem;
+	width: 100%;
+	background-color: #ebebeb;
+}
+
+.new_main {
+	width: 100%;
+	display: flex;
+}
+
+
+.main_content_left {
+	width: 11.6rem;
+	/* height: 2rem; */
+	/* background: #007AFF; */
+	margin-top: 0.66rem;
+	padding: 0 0.32rem 1.17rem 3.21rem;
+	border-right: 0.02rem solid #ebebeb;
+}
+
+
+.main_content_right {
+	/* background: red; */
+	/* height: 2rem; */
+	padding: 0.73rem 3.13rem 0 0.37rem;
+	flex: 1;
+}
+
+.titles {
+	font-size: 0.33rem;
+	font-family: Source Han Sans CN;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 1);
+	padding: 0 0 0.23rem 0;
+	width: 100%;
+	border-bottom: 0.02rem solid #ebebeb;
+}
+
+.datatiem {
+	font-size: 0.15rem;
+	font-family: SourceHanSansSC;
+	font-weight: bold;
+	color: rgba(165, 165, 165, 1);
+	margin-top: 0.13rem;
+}
+
+.mains {
+	width: 100%;
+	font-size: 0.15rem;
+	font-family: SourceHanSansSC;
+	font-weight: bold;
+	color: rgba(95, 95, 95, 1);
+	text-indent: 0.30rem;
+}
+
+.titles2 {
+	font-size: 0.3rem;
+	font-family: Source Han Sans CN;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 1);
+	padding: 0 0 0.23rem 0;
+	width: 100%;
+	border-bottom: 0.02rem solid #ebebeb;
+}
+
+.datatiem2 {
+	font-size: 0.15rem;
+	font-family: SourceHanSansSC;
+	font-weight: bold;
+	color: rgba(165, 165, 165, 1);
+	margin-top: 0.13rem;
+}
+
+
+.right_main {
+	width: 100%;
+	padding: 0.3rem 0 0.3rem 0;
+	display: flex;
+	border-bottom: 0.02rem solid #ebebeb;
+}
+
+.right_main>img {
+	width: 1.55rem;
+	height: 1rem;
+}
+
+.right_main_content {
+	flex: 1;
+	padding-left: 0.15rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.right_main_content>div:nth-child(1) {
+
+	font-size: 0.15rem;
+	font-family: SourceHanSansSC;
+	font-weight: bold;
+	color: rgba(48, 48, 48, 1);
+}
+
+.right_main_content>div:nth-child(2) {
+	font-size: 0.15rem;
+	font-family: SourceHanSansSC;
+	font-weight: bold;
+	color: rgba(48, 48, 48, 1);
+}
+.shangxia{
+	margin-top: 1.17rem;
+	display: flex;
+	justify-content: flex-end;
+}
+.shangxia img {
+	cursor: pointer;
+	width: 0.74rem;
+	height: 0.4rem;
+	margin-left: 0.12rem;
+}
+
